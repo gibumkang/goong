@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "desserts",
+  "info": {
+    "name": "dessert",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "dessert_name": {
+      "type": "string"
+    },
+    "ayce": {
+      "via": "desserts",
+      "model": "ayce"
+    }
+  }
+}

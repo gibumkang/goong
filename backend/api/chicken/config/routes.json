@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chickens",
+      "handler": "chicken.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chickens/count",
+      "handler": "chicken.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chickens/:id",
+      "handler": "chicken.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chickens",
+      "handler": "chicken.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chickens/:id",
+      "handler": "chicken.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chickens/:id",
+      "handler": "chicken.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

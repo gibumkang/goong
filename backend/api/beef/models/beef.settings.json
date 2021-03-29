@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "beefs",
+  "info": {
+    "name": "beef",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "korean_name": {
+      "type": "string"
+    },
+    "english_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "ayce": {
+      "via": "beefs",
+      "model": "ayce"
+    },
+    "limit": {
+      "type": "boolean"
+    }
+  }
+}

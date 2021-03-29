@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shabu_shabus",
+  "info": {
+    "name": "Shabu Shabu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "price": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "ayce": {
+      "via": "shabu_shabus",
+      "model": "ayce"
+    }
+  }
+}

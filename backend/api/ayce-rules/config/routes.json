@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ayce-rules",
+      "handler": "ayce-rules.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ayce-rules/count",
+      "handler": "ayce-rules.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ayce-rules/:id",
+      "handler": "ayce-rules.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ayce-rules",
+      "handler": "ayce-rules.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ayce-rules/:id",
+      "handler": "ayce-rules.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ayce-rules/:id",
+      "handler": "ayce-rules.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

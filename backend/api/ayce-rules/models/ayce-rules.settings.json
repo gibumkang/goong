@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ayce_rules",
+  "info": {
+    "name": "Ayce Rules",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Rule": {
+      "type": "richtext"
+    }
+  }
+}

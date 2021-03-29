@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shabu-shabus",
+      "handler": "shabu-shabu.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shabu-shabus/count",
+      "handler": "shabu-shabu.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shabu-shabus/:id",
+      "handler": "shabu-shabu.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/shabu-shabus",
+      "handler": "shabu-shabu.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shabu-shabus/:id",
+      "handler": "shabu-shabu.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shabu-shabus/:id",
+      "handler": "shabu-shabu.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

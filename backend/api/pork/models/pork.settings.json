@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pork",
+  "info": {
+    "name": "pork",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "english_name": {
+      "type": "string"
+    },
+    "korean_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "boolean"
+    },
+    "ayce": {
+      "via": "porks",
+      "model": "ayce"
+    }
+  }
+}
