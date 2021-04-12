@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import * as GS from '../../styles/global'
 import * as S from './footer.styles'
-import { LINKS } from '../../data/links'
 import { NextRouter, useRouter } from 'next/router'
 import { GoMail } from 'react-icons/Go'
 import { useQuery } from '@apollo/react-hooks'
