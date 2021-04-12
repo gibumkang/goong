@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import * as GS from '../../styles/global'
 import * as S from './footer.styles'
+import { LINKS } from '../../data/links'
 import { NextRouter, useRouter } from 'next/router'
-import { GoMail } from 'react-icons/Go'
+// import { GoMail } from 'react-icons/Go'
 import { useQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
 import { FaPhoneSquareAlt } from 'react-icons/Fa'
@@ -59,7 +60,7 @@ const Footer: React.FC<Props> = () => {
                                 </li>
                                 <li>{footer.street_address}</li>
                                 <li>{footer.city_address}</li>
-                                {footer.email && (
+                                {/* {footer.email && (
                                     <li>
                                         <Link href={`mailto:#`}>
                                             <a>
@@ -67,7 +68,7 @@ const Footer: React.FC<Props> = () => {
                                             </a>
                                         </Link>
                                     </li>
-                                )}
+                                )} */}
                                 <li className="phone">
                                     <Link href={`tel:${footer.phone}`}>
                                         <a>
