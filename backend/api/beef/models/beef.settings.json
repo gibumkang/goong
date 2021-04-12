@@ -20,12 +20,11 @@
     "price": {
       "type": "string"
     },
-    "ayce": {
-      "via": "beefs",
-      "model": "ayce"
-    },
     "limit": {
       "type": "boolean"
+    },
+    "ayces": {
+      "collection": "ayce"
     }
   }
 }

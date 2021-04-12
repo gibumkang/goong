@@ -12,7 +12,7 @@ export const theme = {
 	midWidth: '768px',
 	smWidth: '640px',
 	colors: {
-		primary: '#b2236d',
+		primary: '#D3B926',
 		secondary: '#47991A',
 		block: '#b2236d',
 		icon: '#80F342',

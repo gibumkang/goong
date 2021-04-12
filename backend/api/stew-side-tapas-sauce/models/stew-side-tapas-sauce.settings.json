@@ -23,9 +23,8 @@
     "limit": {
       "type": "boolean"
     },
-    "ayce": {
-      "via": "sides",
-      "model": "ayce"
+    "ayces": {
+      "collection": "ayce"
     }
   }
 }

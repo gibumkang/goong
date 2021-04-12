@@ -14,9 +14,8 @@
     "dessert_name": {
       "type": "string"
     },
-    "ayce": {
-      "via": "desserts",
-      "model": "ayce"
+    "ayces": {
+      "collection": "ayce"
     }
   }
 }

@@ -1,9 +1,10 @@
 //serves as a master scss file if you will
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { createGlobalStyle } from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
     html {
         font-size: 62.5%;
+        scroll-behavior: smooth;
     }
     body, html {
         padding: 0;
@@ -214,6 +215,6 @@ const GlobalStyle = createGlobalStyle`
     .mr-5 {
         margin-right: 5rem;
     }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

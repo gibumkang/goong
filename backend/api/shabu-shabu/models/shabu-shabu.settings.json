@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "shabu_shabus",
   "info": {
-    "name": "Shabu Shabu"
+    "name": "Shabu Shabu",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,10 +16,6 @@
     },
     "name": {
       "type": "string"
-    },
-    "ayce": {
-      "via": "shabu_shabus",
-      "model": "ayce"
     }
   }
 }

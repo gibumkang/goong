@@ -17,39 +17,29 @@
         "standard",
         "goong",
         "premium",
-        "shabu_shabu"
+        "shabushabu"
       ]
-    },
-    "beefs": {
-      "collection": "beef",
-      "via": "ayce"
-    },
-    "porks": {
-      "collection": "pork",
-      "via": "ayce"
-    },
-    "chickens": {
-      "collection": "chicken",
-      "via": "ayce"
-    },
-    "seafoods": {
-      "collection": "seafood",
-      "via": "ayce"
-    },
-    "sides": {
-      "collection": "stew-side-tapas-sauce",
-      "via": "ayce"
-    },
-    "desserts": {
-      "collection": "dessert",
-      "via": "ayce"
     },
     "meta_price": {
       "type": "string"
     },
-    "shabu_shabus": {
-      "collection": "shabu-shabu",
-      "via": "ayce"
+    "beefs": {
+      "collection": "beef"
+    },
+    "chickens": {
+      "collection": "chicken"
+    },
+    "desserts": {
+      "collection": "dessert"
+    },
+    "porks": {
+      "collection": "pork"
+    },
+    "seafoods": {
+      "collection": "seafood"
+    },
+    "sides": {
+      "collection": "stew-side-tapas-sauce"
     }
   }
 }

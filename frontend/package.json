@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start"
   },
@@ -11,6 +11,8 @@
     "@apollo/client": "^3.3.7",
     "@apollo/react-hooks": "3.1.5",
     "@apollo/react-ssr": "3.1.5",
+    "@material-ui/core": "^4.11.3",
+    "@types/react-router": "^5.1.13",
     "apollo-boost": "0.4.7",
     "apollo-link-http": "^1.5.17",
     "apollo-server-micro": "^2.19.2",
@@ -34,6 +36,7 @@
     "react-icons": "^4.1.0",
     "react-reveal": "^1.2.2",
     "recompose": "^0.17.0",
+    "simple-react-lightbox": "^3.6.5",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.2"
   },

@@ -9,33 +9,46 @@ export const Footer = styled.footer`
 `;
 
 export const FooterBg = styled(GS.FullWidth)`
-	background: ${(props) => props.theme.colors.primary};
+	background: #fff;
 	padding: 7.5rem 0rem;
+	border-top: .1rem solid ${props => props.theme.colors.primary};
 	h4 {
-		color: #fff;
+		color: #000;
 	}
 `;
 
 export const FooterInformation = styled(GS.FlexEven)`
+	gap: 1.5rem;
 	text-align: left;
 	align-items: flex-start;
 	& > div:nth-child(1) {
 		flex: 1;
 		ul {
 			li {
-				padding: 0.5rem 0rem;
-				color: #fff;
+				padding: 0.25rem 0rem;
+				color: #000;
 				a {
 					text-decoration: none;
-					color: #eee;
+					color: #222;
 					&.active {
-						color: #fff;
+						color: #000;
 						font-weight: bold;
 					}
 				}
 				img {
-					filter: brightness(0) invert(1);
-					max-width: 10rem;
+					/* filter: brightness(0) invert(1); */
+					width: 13rem;
+					height: auto;
+					margin-bottom: 1rem;
+				}
+				&, a {
+					font-size: 1.4rem;
+				}
+				&.phone {
+					svg {
+						position: relative;
+						bottom: .1rem;
+					}
 				}
 			}
 		}
@@ -50,7 +63,7 @@ export const FooterInformation = styled(GS.FlexEven)`
 				display: inline;
 				padding-right: 1.5rem;
 				a {
-					color: #fff;
+					color: #000;
 					text-decoration: none;
 				}
 				a.active {
@@ -101,8 +114,15 @@ export const FooterInformation = styled(GS.FlexEven)`
 	}
 	div,
 	p,
-	h3 {
-		color: #fff;
+	h3, a {
+		color: #000;
+	}
+	.disclaimer {
+		font-size: 1.4rem;
+		a {
+			font-size: 1.1rem;
+			text-decoration: none;
+		}
 	}
 	@media screen and (max-width: 900px) {
 		display: block;
@@ -118,6 +138,9 @@ export const FooterInformation = styled(GS.FlexEven)`
 		}
 		h3 {
 			font-size: 3.5rem;
+		}
+		.disclaimer {
+			margin-top: 1.25rem;
 		}
 	}
 `;

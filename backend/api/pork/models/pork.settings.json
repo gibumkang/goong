@@ -23,9 +23,8 @@
     "limit": {
       "type": "boolean"
     },
-    "ayce": {
-      "via": "porks",
-      "model": "ayce"
+    "ayces": {
+      "collection": "ayce"
     }
   }
 }
