@@ -108,7 +108,7 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                 </S.Container>
                             )}
                             {ayce.chickens.length > 0 && (
-                                <S.Container>
+                                <S.Container key={ayce.chickens}>
                                     <div id="chicken" className="anchor" />
                                     <h3>Chicken</h3>
                                     <S.Column>
@@ -151,7 +151,7 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                 </S.Container>
                             )}
                             {ayce.porks.length > 0 && (
-                                <S.Container>
+                                <S.Container key={ayce.porks}>
                                     <div id="pork" className="anchor" />
                                     <h3>Pork</h3>
                                     <S.Column>
@@ -194,7 +194,7 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                 </S.Container>
                             )}
                             {ayce.seafoods.length > 0 && (
-                                <S.Container>
+                                <S.Container key={ayce.seafoods}>
                                     <div id="seafood" className="anchor" />
                                     <h3>Seafood</h3>
                                     <S.Column>
@@ -237,7 +237,7 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                 </S.Container>
                             )}
                             {ayce.sides.length > 0 && (
-                                <S.Container>
+                                <S.Container key={ayce.sides}>
                                     <div id="appetizers" className="anchor" />
                                     <h3>Appetizers</h3>
                                     <S.Column>
@@ -283,7 +283,10 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                             {data.ayces.map(
                                 (ayce) =>
                                     ayce.ayce_type === selection && (
-                                        <Tooltip title="Click on a category to navigate">
+                                        <Tooltip
+                                            title="Click on a category to navigate"
+                                            key={ayce.ayce_type}
+                                        >
                                             <S.FooterNavigation>
                                                 <ul>
                                                     {ayce.sides.length > 0 && (
