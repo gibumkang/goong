@@ -6,7 +6,7 @@ import { NextRouter, useRouter } from 'next/router'
 // import { GoMail } from 'react-icons/Go'
 import { useQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
-import { FaPhoneSquareAlt } from 'react-icons/Fa'
+import { FaPhoneSquareAlt } from 'react-icons/fa'
 import React, { useContext, useEffect, useState } from 'react'
 
 interface Props {
