@@ -48,11 +48,7 @@ const Footer: React.FC<Props> = () => {
                                                 height="60"
                                                 width="100"
                                                 loading="lazy"
-                                                src={
-                                                    data &&
-                                                    process.env.BASE_URL +
-                                                        data.assets[0].logo.url
-                                                }
+                                                src="/goong.png"
                                                 alt="Las Vegas Goong"
                                             />
                                         </a>
