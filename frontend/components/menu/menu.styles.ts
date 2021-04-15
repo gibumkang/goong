@@ -111,7 +111,7 @@ export const FooterNavigation = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 4rem 1.5rem;
     background: #fff;
     z-index: 2;
     border-top: 0.1rem solid #ccc;

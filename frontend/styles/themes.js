@@ -19,7 +19,7 @@ export const theme = {
         text: '#222',
         textActive: '#000',
         grey: '#ccc',
-        background: '#f1f1f1',
+        background: '#fff',
         navBackground: '#fff',
         success: 'green',
         disabled: '#888',

@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import { useQuery } from '@apollo/react-hooks'
 import { from, gql } from 'apollo-boost'
 import MenuComponent from '../components/menu'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { useContext, useState, useEffect, useReducer } from 'react'
+import classes from '*.module.css'
 
 interface info {
     standard: {
@@ -57,20 +60,20 @@ const Menu = () => {
             total:
                 data &&
                 data.ayces[0].beefs.length +
-                    data.ayces[0].chickens.length +
-                    data.ayces[0].porks.length +
-                    data.ayces[0].sides.length +
-                    data.ayces[0].desserts.length,
+                data.ayces[0].chickens.length +
+                data.ayces[0].porks.length +
+                data.ayces[0].sides.length +
+                data.ayces[0].desserts.length,
             price: data && data.ayces[0].meta_price,
         },
         goong: {
             total:
                 data &&
                 data.ayces[1].beefs.length +
-                    data.ayces[1].chickens.length +
-                    data.ayces[1].porks.length +
-                    data.ayces[1].sides.length +
-                    data.ayces[1].desserts.length,
+                data.ayces[1].chickens.length +
+                data.ayces[1].porks.length +
+                data.ayces[1].sides.length +
+                data.ayces[1].desserts.length,
             price: data && data.ayces[1].meta_price,
         },
 
@@ -78,140 +81,155 @@ const Menu = () => {
             total:
                 data &&
                 data.ayces[2].beefs.length +
-                    data.ayces[2].chickens.length +
-                    data.ayces[2].porks.length +
-                    data.ayces[2].sides.length +
-                    data.ayces[2].desserts.length,
+                data.ayces[2].chickens.length +
+                data.ayces[2].porks.length +
+                data.ayces[2].sides.length +
+                data.ayces[2].desserts.length,
             price: data && data.ayces[2].meta_price,
         },
         shabushabu: {
             total:
                 data &&
                 data.ayces[3].beefs.length +
-                    data.ayces[3].chickens.length +
-                    data.ayces[3].porks.length +
-                    data.ayces[3].sides.length +
-                    data.ayces[3].desserts.length,
+                data.ayces[3].chickens.length +
+                data.ayces[3].porks.length +
+                data.ayces[3].sides.length +
+                data.ayces[3].desserts.length,
             price: data && data.ayces[3].meta_price,
         },
     }
     console.log(data)
     return (
         <GS.FullWidth>
-            <MenuNavigation>
-                <h2>
-                    {!menu ? (
-                        'Please select a menu'
-                    ) : (
-                        <>
-                            {navLanguage(menu)}{' '}
-                            <div onClick={() => setMenu(null)}>
-                                see another menu
+            {loading ?
+                <LoadingContainer>
+                    <CircularProgress />
+                </LoadingContainer> :
+                <>
+                    <MenuNavigation>
+                        <h2>
+                            {!menu ? (
+                                'Please select a menu'
+                            ) : (
+                                <>
+                                    {navLanguage(menu)}{' '}
+                                    <div onClick={() => setMenu(null)}>
+                                        see another menu
                             </div>
-                        </>
-                    )}
-                </h2>
-            </MenuNavigation>
-            <GS.YPadding>
-                <GS.MaxContainer>
-                    {!menu ? (
-                        <MenuSelector>
-                            {/* <div>
-                                <h2>Main Menu</h2>
-                                <p>A la carte menu, available all day.</p>
-                                <GS.MainButton
-                                    onClick={() => updateMenu('mainmenu')}
-                                >
-                                    View Main Menu
-                                </GS.MainButton>
-                            </div> */}
-                            <div>
-                                <h2>AYCE Korean BBQ Menu</h2>
-                                <p>
-                                    A delicious 90-minute AYCE feast, available
-                                    for dinner only
+                                </>
+                            )}
+                        </h2>
+                    </MenuNavigation>
+                    <GS.YCPadding padding={'15rem'}>
+                        <GS.MaxContainer>
+                            {!menu ? (
+                                <MenuSelector>
+                                    {/* <div>
+                                        <h2>Main Menu</h2>
+                                        <p>A la carte menu, available all day.</p>
+                                        <GS.MainButton
+                                            onClick={() => updateMenu('mainmenu')}
+                                        >
+                                            View Main Menu
+                                        </GS.MainButton>
+                                    </div> */}
+                                    <div>
+                                        <h2>AYCE Korean BBQ Menu</h2>
+                                        <p>
+                                            A delicious 90-minute AYCE feast, available
+                                            for dinner only
                                 </p>
-                                <GS.FlexEven className="ayce-button-container">
-                                    <div>
-                                        <div className="info">
-                                            <GS.MainButton
-                                                onClick={() =>
-                                                    setMenu('standard')
-                                                }
-                                            >
-                                                Standard
+                                        <GS.FlexEven className="ayce-button-container">
+                                            <div>
+                                                <div className="info">
+                                                    <GS.MainButton
+                                                        onClick={() =>
+                                                            setMenu('standard')
+                                                        }
+                                                    >
+                                                        Standard
                                             </GS.MainButton>
-                                            <div>
-                                                {INFO.standard.total} selections
+                                                    <div>
+                                                        {INFO.standard.total} selections
+                                            </div>
+                                                    <div>
+                                                        {INFO.standard.price} per person
+                                            </div>
+                                                </div>
                                             </div>
                                             <div>
-                                                {INFO.standard.price} per person
+                                                <div className="info">
+                                                    <GS.MainButton
+                                                        onClick={() => setMenu('goong')}
+                                                    >
+                                                        Goong
+                                            </GS.MainButton>
+                                                    <div>
+                                                        {INFO.goong.total} selections
                                             </div>
-                                        </div>
+                                                    <div>
+                                                        {INFO.goong.price} per person
+                                            </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="info">
+                                                    <GS.MainButton
+                                                        onClick={() =>
+                                                            setMenu('premium')
+                                                        }
+                                                    >
+                                                        Premium
+                                            </GS.MainButton>
+                                                    <div>
+                                                        {INFO.premium.total} selections
+                                            </div>
+                                                    <div>
+                                                        {INFO.premium.price} per person
+                                            </div>
+                                                </div>
+                                            </div>
+                                        </GS.FlexEven>
                                     </div>
                                     <div>
-                                        <div className="info">
-                                            <GS.MainButton
-                                                onClick={() => setMenu('goong')}
-                                            >
-                                                Goong
-                                            </GS.MainButton>
-                                            <div>
-                                                {INFO.goong.total} selections
-                                            </div>
-                                            <div>
-                                                {INFO.goong.price} per person
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="info">
-                                            <GS.MainButton
-                                                onClick={() =>
-                                                    setMenu('premium')
-                                                }
-                                            >
-                                                Premium
-                                            </GS.MainButton>
-                                            <div>
-                                                {INFO.premium.total} selections
-                                            </div>
-                                            <div>
-                                                {INFO.premium.price} per person
-                                            </div>
-                                        </div>
-                                    </div>
-                                </GS.FlexEven>
-                            </div>
-                            <div>
-                                <h2>AYCE Shabu Shabu Menu</h2>
-                                <p>
-                                    Enjoy delicious AYCE hotpot with fine meat
-                                    selections
+                                        <h2>AYCE Shabu Shabu Menu</h2>
+                                        <p>
+                                            Enjoy delicious AYCE hotpot with fine meat
+                                            selections
                                 </p>
-                                <div className="info">
-                                    <GS.MainButton
-                                        onClick={() => setMenu('shabushabu')}
-                                    >
-                                        Shabu Shabu Menu
+                                        <div className="info">
+                                            <GS.MainButton
+                                                onClick={() => setMenu('shabushabu')}
+                                            >
+                                                Shabu Shabu Menu
                                     </GS.MainButton>
-                                    <div>
-                                        {INFO.shabushabu.total} selections
+                                            <div>
+                                                {INFO.shabushabu.total} selections
                                     </div>
-                                    <div>
-                                        {INFO.shabushabu.price} per person
+                                            <div>
+                                                {INFO.shabushabu.price} per person
                                     </div>
-                                </div>
-                            </div>
-                        </MenuSelector>
-                    ) : (
-                        <MenuComponent selection={menu} data={data && data} />
-                    )}
-                </GS.MaxContainer>
-            </GS.YPadding>
+                                        </div>
+                                    </div>
+                                </MenuSelector>
+                            ) : (
+                                <MenuComponent selection={menu} data={data && data} />
+                            )}
+                        </GS.MaxContainer>
+                    </GS.YCPadding>
+                </>
+            }
         </GS.FullWidth>
     )
 }
+
+const LoadingContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 
 const MenuNavigation = styled.div`
     text-align: center;
@@ -237,7 +255,6 @@ const MenuNavigation = styled.div`
         }
     }
 `
-
 const MenuSelector = styled(GS.GridTwo)`
     grid-gap: 2.5rem;
     & > div {
@@ -271,12 +288,12 @@ const MenuSelector = styled(GS.GridTwo)`
         div {
             margin-bottom: 2.5rem;
         }
-    }
         a {
             width: 100%;
         }
     }
 `
+
 
 const MENU_QUERY = gql`
     {

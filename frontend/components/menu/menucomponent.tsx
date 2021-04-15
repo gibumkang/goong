@@ -64,6 +64,49 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                 (ayce) =>
                     ayce.ayce_type === selection && (
                         <div key={ayce.ayce_type}>
+                            {ayce.sides.length > 0 && (
+                                <S.Container key={ayce.sides}>
+                                    <div id="appetizers" className="anchor" />
+                                    <h3>Appetizers</h3>
+                                    <S.Column>
+                                        {data.ayces.map(
+                                            (ayce) =>
+                                                ayce.ayce_type === selection &&
+                                                ayce.sides.map((side) => {
+                                                    return (
+                                                        <GS.FlexEven
+                                                            key={
+                                                                side.english_name
+                                                            }
+                                                        >
+                                                            <div className="name">
+                                                                {
+                                                                    side.english_name
+                                                                }{' '}
+                                                                <div className="korean">
+                                                                    {
+                                                                        side.korean_name
+                                                                    }
+                                                                </div>
+                                                                {side.limit ===
+                                                                    true && (
+                                                                        <div className="limit">
+                                                                            Limit 1
+                                                                            Per
+                                                                            Person
+                                                                        </div>
+                                                                    )}
+                                                            </div>
+                                                            <div className="price">
+                                                                ${side.price}
+                                                            </div>
+                                                        </GS.FlexEven>
+                                                    )
+                                                })
+                                        )}
+                                    </S.Column>
+                                </S.Container>
+                            )}
                             {ayce.beefs.length > 0 && (
                                 <S.Container>
                                     <div id="beef" className="anchor" />
@@ -90,12 +133,12 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                                                 </div>
                                                                 {beef.limit ===
                                                                     true && (
-                                                                    <div className="limit">
-                                                                        Limit 1
-                                                                        Per
-                                                                        Person
-                                                                    </div>
-                                                                )}
+                                                                        <div className="limit">
+                                                                            Limit 1
+                                                                            Per
+                                                                            Person
+                                                                        </div>
+                                                                    )}
                                                             </div>
                                                             <div className="price">
                                                                 ${beef.price}
@@ -133,12 +176,12 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                                                 </div>
                                                                 {pork.limit ===
                                                                     true && (
-                                                                    <div className="limit">
-                                                                        Limit 1
-                                                                        Per
-                                                                        Person
-                                                                    </div>
-                                                                )}
+                                                                        <div className="limit">
+                                                                            Limit 1
+                                                                            Per
+                                                                            Person
+                                                                        </div>
+                                                                    )}
                                                             </div>
                                                             <div className="price">
                                                                 ${pork.price}
@@ -176,12 +219,12 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                                                 </div>
                                                                 {chicken.limit ===
                                                                     true && (
-                                                                    <div className="limit">
-                                                                        Limit 1
-                                                                        Per
-                                                                        Person
-                                                                    </div>
-                                                                )}
+                                                                        <div className="limit">
+                                                                            Limit 1
+                                                                            Per
+                                                                            Person
+                                                                        </div>
+                                                                    )}
                                                             </div>
                                                             <div className="price">
                                                                 ${chicken.price}
@@ -219,12 +262,12 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                                                 </div>
                                                                 {seafood.limit ===
                                                                     true && (
-                                                                    <div className="limit">
-                                                                        Limit 1
-                                                                        Per
-                                                                        Person
-                                                                    </div>
-                                                                )}
+                                                                        <div className="limit">
+                                                                            Limit 1
+                                                                            Per
+                                                                            Person
+                                                                        </div>
+                                                                    )}
                                                             </div>
                                                             <div className="price">
                                                                 ${seafood.price}
@@ -236,50 +279,6 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                     </S.Column>
                                 </S.Container>
                             )}
-                            {ayce.sides.length > 0 && (
-                                <S.Container key={ayce.sides}>
-                                    <div id="appetizers" className="anchor" />
-                                    <h3>Appetizers</h3>
-                                    <S.Column>
-                                        {data.ayces.map(
-                                            (ayce) =>
-                                                ayce.ayce_type === selection &&
-                                                ayce.sides.map((side) => {
-                                                    return (
-                                                        <GS.FlexEven
-                                                            key={
-                                                                side.english_name
-                                                            }
-                                                        >
-                                                            <div className="name">
-                                                                {
-                                                                    side.english_name
-                                                                }{' '}
-                                                                <div className="korean">
-                                                                    {
-                                                                        side.korean_name
-                                                                    }
-                                                                </div>
-                                                                {side.limit ===
-                                                                    true && (
-                                                                    <div className="limit">
-                                                                        Limit 1
-                                                                        Per
-                                                                        Person
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                            <div className="price">
-                                                                ${side.price}
-                                                            </div>
-                                                        </GS.FlexEven>
-                                                    )
-                                                })
-                                        )}
-                                    </S.Column>
-                                </S.Container>
-                            )}
-
                             {data.ayces.map(
                                 (ayce) =>
                                     ayce.ayce_type === selection && (
@@ -305,12 +304,12 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                                     )}
                                                     {ayce.chickens.length >
                                                         0 && (
-                                                        <li>
-                                                            <a href="#chicken">
-                                                                Chicken
+                                                            <li>
+                                                                <a href="#chicken">
+                                                                    Chicken
                                                             </a>
-                                                        </li>
-                                                    )}
+                                                            </li>
+                                                        )}
                                                     {ayce.porks.length > 0 && (
                                                         <li>
                                                             <a href="#pork">
@@ -320,12 +319,12 @@ const MenuComponent: React.FC<Props> = ({ data, selection }) => {
                                                     )}
                                                     {ayce.seafoods.length >
                                                         0 && (
-                                                        <li>
-                                                            <a href="#seafood">
-                                                                Seafood
+                                                            <li>
+                                                                <a href="#seafood">
+                                                                    Seafood
                                                             </a>
-                                                        </li>
-                                                    )}
+                                                            </li>
+                                                        )}
                                                 </ul>
                                             </S.FooterNavigation>
                                         </Tooltip>
