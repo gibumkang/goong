@@ -18,16 +18,19 @@ const Layout = ({ children }) => {
         <ThemeProvider theme={darkMode ? DarkMode : Theme}>
             <SimpleReactLightbox>
                 <GlobalStyle />
-                <Header toggleDarkMode={toggleDarkMode} />
-                {children}
-                <Footer />
+                <Trim>
+                    <Header toggleDarkMode={toggleDarkMode} />
+                    {children}
+                    <Footer />
+                </Trim>
             </SimpleReactLightbox>
         </ThemeProvider>
     )
 }
 
-const Grid = styled.div`
-    grid-template-rows: 1fr 2fr 1fr;
+const Trim = styled.div`
+    border: .5rem solid ${props => props.theme.colors.primary};
 `
+
 
 export default Layout

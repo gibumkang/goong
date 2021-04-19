@@ -58,6 +58,7 @@ export const Column = styled(GS.GridThree)`
         }
     }
     .price {
+        display: none;
         text-align: right;
         font-size: 1.9rem;
         font-family: ${(props) => props.theme.fonts.header};
@@ -75,7 +76,7 @@ export const Column = styled(GS.GridThree)`
     @media screen and (max-width: ${MOBILE_BREAKPOINT.width}) {
         display: block;
         & > div {
-            padding: 1.5rem 0rem;
+            padding: 3rem 0rem;
             &:nth-of-type(2n) {
                 border-top: 0.1rem solid rgba(0, 0, 0, 0.05);
                 border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
@@ -90,7 +91,7 @@ export const Container = styled.div`
         text-align: center;
         padding-bottom: 0.5rem;
         margin-bottom: 2.5rem;
-        border-bottom: 0.1rem solid #ccc;
+        border-bottom: 0.1rem solid ${props => props.theme.colors.primary};
     }
     .anchor {
         display: block;
@@ -111,7 +112,7 @@ export const FooterNavigation = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 1.5rem 1.5rem 4rem 1.5rem;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
     background: #fff;
     z-index: 2;
     border-top: 0.1rem solid #ccc;

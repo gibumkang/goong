@@ -35,28 +35,30 @@ const Footer: React.FC<Props> = () => {
         }
     }, [data])
     return (
-        <S.FooterBg>
-            <GS.MaxContainer>
-                {footer != null && (
-                    <S.FooterInformation>
-                        <div>
-                            <ul>
-                                <li>
-                                    <Link href="/">
-                                        <a>
-                                            <img
-                                                height="60"
-                                                width="100"
-                                                loading="lazy"
-                                                src="/goong.png"
-                                                alt="Las Vegas Goong"
-                                            />
-                                        </a>
-                                    </Link>
-                                </li>
-                                <li>{footer.street_address}</li>
-                                <li>{footer.city_address}</li>
-                                {/* {footer.email && (
+        <>
+            <S.Pattern><div className="pattern" /></S.Pattern>
+            <S.FooterBg>
+                <GS.MaxContainer>
+                    {footer != null && (
+                        <S.FooterInformation>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <Link href="/">
+                                            <a>
+                                                <img
+                                                    height="60"
+                                                    width="100"
+                                                    loading="lazy"
+                                                    src="/goong.png"
+                                                    alt="Las Vegas Goong"
+                                                />
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li>{footer.street_address}</li>
+                                    <li>{footer.city_address}</li>
+                                    {/* {footer.email && (
                                     <li>
                                         <Link href={`mailto:#`}>
                                             <a>
@@ -65,50 +67,51 @@ const Footer: React.FC<Props> = () => {
                                         </Link>
                                     </li>
                                 )} */}
-                                <li className="phone">
-                                    <Link href={`tel:${footer.phone}`}>
-                                        <a>
-                                            <FaPhoneSquareAlt /> {footer.phone}
-                                        </a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul>
-                                {LINKS.map((link) => {
-                                    return (
-                                        <li key={link.title}>
-                                            <Link href={link.href}>
-                                                <a
-                                                    className={
-                                                        router.pathname ===
-                                                        link.href
-                                                            ? 'active'
-                                                            : undefined
-                                                    }
-                                                >
-                                                    {link.title}
-                                                </a>
-                                            </Link>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
-                            <GS.HR />
-                            {/* <h3>We make websites simple.</h3> */}
-                            <p className="disclaimer">
-                                &copy; {year} Goong Las Vegas. All Rights
+                                    <li className="phone">
+                                        <Link href={`tel:${footer.phone}`}>
+                                            <a>
+                                                <FaPhoneSquareAlt /> {footer.phone}
+                                            </a>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    {LINKS.map((link) => {
+                                        return (
+                                            <li key={link.title}>
+                                                <Link href={link.href}>
+                                                    <a
+                                                        className={
+                                                            router.pathname ===
+                                                                link.href
+                                                                ? 'active'
+                                                                : undefined
+                                                        }
+                                                    >
+                                                        {link.title}
+                                                    </a>
+                                                </Link>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                                <GS.HR />
+                                {/* <h3>We make websites simple.</h3> */}
+                                <p className="disclaimer">
+                                    &copy; {year} Goong Las Vegas. All Rights
                                 Reserved.{' '}
-                                <Link href="https://studiokanvas.com">
-                                    <a>Website by Studio Kanvas</a>
-                                </Link>
-                            </p>
-                        </div>
-                    </S.FooterInformation>
-                )}
-            </GS.MaxContainer>
-        </S.FooterBg>
+                                    <Link href="https://studiokanvas.com">
+                                        <a>Website by Studio Kanvas</a>
+                                    </Link>
+                                </p>
+                            </div>
+                        </S.FooterInformation>
+                    )}
+                </GS.MaxContainer>
+            </S.FooterBg>
+        </>
     )
 }
 

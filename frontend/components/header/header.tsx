@@ -19,7 +19,7 @@ type initial = {
 
 const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
     const router = useRouter()
-    const title = 'Studio Kanvas Agency'
+    const title = 'Goong Korean BBQ'
     const [page, setPage] = useState(null)
     const [init, setInit] = useState(false)
     const size = useWindowSize()
@@ -138,7 +138,7 @@ const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
                                                         <a
                                                             className={
                                                                 router.pathname ===
-                                                                link.href
+                                                                    link.href
                                                                     ? 'active'
                                                                     : undefined
                                                             }

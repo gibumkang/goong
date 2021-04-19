@@ -25,6 +25,15 @@
     },
     "ayces": {
       "collection": "ayce"
+    },
+    "standard_order": {
+      "type": "integer"
+    },
+    "premium_order": {
+      "type": "integer"
+    },
+    "goong_order": {
+      "type": "integer"
     }
   }
 }

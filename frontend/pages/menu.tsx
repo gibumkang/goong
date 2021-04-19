@@ -1,234 +1,116 @@
 import * as GS from '../styles/global'
 import styled from 'styled-components'
-import { useQuery } from '@apollo/react-hooks'
-import { from, gql } from 'apollo-boost'
+import Fade from 'react-reveal/Fade'
 import MenuComponent from '../components/menu'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { useContext, useState, useEffect, useReducer } from 'react'
-import classes from '*.module.css'
-
-interface info {
-    standard: {
-        total: number
-        price: string
-    }
-    goong: {
-        total: number
-        price: string
-    }
-    premium: {
-        total: number
-        price: string
-    }
-    shabushabu: {
-        total: number
-        price: string
-    }
-}
+import { useState, useEffect } from 'react'
+import useDisplayMenu from '../hooks/useDisplayMenu'
 
 const Menu = () => {
-    const { loading, error, data } = useQuery(MENU_QUERY)
-    //run the console.log below to see the errors
-    //console.log(JSON.stringify(data), JSON.stringify(error, null, 2));
+
+    const { standard, goong, premium, shabushabu } = useDisplayMenu()
     const [menu, setMenu] = useState(null)
 
-    function navLanguage(selection) {
-        switch (selection) {
-            case 'standard':
-                return `Standard all-you-can-eat menu (${data.ayces[0].meta_price} per person)`
-                break
-            case 'goong':
-                return `Goong all-you-can-eat menu (${data.ayces[1].meta_price} per person)`
-                break
-            case 'premium':
-                return `Premium all-you-can-eat menu (${data.ayces[2].meta_price} per person)`
-                break
-            case 'shabushabu':
-                return `Shabu Shabu all-you-can-eat menu (${data.ayces[3].meta_price} per person)`
-                break
-            case 'mainmenu':
-                return 'à la carte menu'
-                break
-            default:
-                break
+    const menuName = menu => {
+        switch (menu) {
+            case standard: return 'Standard'
+            case goong: return 'Goong'
+            case premium: return 'Premium'
+            case shabushabu: return 'Shabu Shabu'
         }
     }
 
-    const INFO: info = {
-        standard: {
-            total:
-                data &&
-                data.ayces[0].beefs.length +
-                data.ayces[0].chickens.length +
-                data.ayces[0].porks.length +
-                data.ayces[0].sides.length +
-                data.ayces[0].desserts.length,
-            price: data && data.ayces[0].meta_price,
-        },
-        goong: {
-            total:
-                data &&
-                data.ayces[1].beefs.length +
-                data.ayces[1].chickens.length +
-                data.ayces[1].porks.length +
-                data.ayces[1].sides.length +
-                data.ayces[1].desserts.length,
-            price: data && data.ayces[1].meta_price,
-        },
-
-        premium: {
-            total:
-                data &&
-                data.ayces[2].beefs.length +
-                data.ayces[2].chickens.length +
-                data.ayces[2].porks.length +
-                data.ayces[2].sides.length +
-                data.ayces[2].desserts.length,
-            price: data && data.ayces[2].meta_price,
-        },
-        shabushabu: {
-            total:
-                data &&
-                data.ayces[3].beefs.length +
-                data.ayces[3].chickens.length +
-                data.ayces[3].porks.length +
-                data.ayces[3].sides.length +
-                data.ayces[3].desserts.length,
-            price: data && data.ayces[3].meta_price,
-        },
-    }
-    console.log(data)
     return (
-        <GS.FullWidth>
-            {loading ?
-                <LoadingContainer>
-                    <CircularProgress />
-                </LoadingContainer> :
-                <>
-                    <MenuNavigation>
-                        <h2>
-                            {!menu ? (
-                                'Please select a menu'
-                            ) : (
-                                <>
-                                    {navLanguage(menu)}{' '}
-                                    <div onClick={() => setMenu(null)}>
-                                        see another menu
-                            </div>
-                                </>
-                            )}
-                        </h2>
-                    </MenuNavigation>
-                    <GS.YCPadding padding={'15rem'}>
-                        <GS.MaxContainer>
-                            {!menu ? (
-                                <MenuSelector>
-                                    {/* <div>
-                                        <h2>Main Menu</h2>
-                                        <p>A la carte menu, available all day.</p>
-                                        <GS.MainButton
-                                            onClick={() => updateMenu('mainmenu')}
-                                        >
-                                            View Main Menu
-                                        </GS.MainButton>
-                                    </div> */}
-                                    <div>
-                                        <h2>AYCE Korean BBQ Menu</h2>
-                                        <p>
-                                            A delicious 90-minute AYCE feast, available
-                                            for dinner only
+        <Background>
+            <Fade>
+                <MenuNavigation>
+                    {!menu ? (
+                        <h2>Please select a menu</h2>
+                    ) : (
+                        <>
+                            <h2>AYCE {menuName(menu)} Menu</h2>
+                            <div onClick={() => setMenu(null)}>See another menu</div>
+                        </>
+                    )}
+                </MenuNavigation>
+            </Fade>
+            <GS.YCPadding padding={'15rem'}>
+                <GS.MaxContainer>
+                    {!menu ? (
+                        <MenuSelector>
+                            <div>
+                                <h2>AYCE Korean BBQ Menu</h2>
+                                <p>
+                                    A delicious 90-minute AYCE feast, available
+                                    for dinner only
                                 </p>
-                                        <GS.FlexEven className="ayce-button-container">
-                                            <div>
-                                                <div className="info">
-                                                    <GS.MainButton
-                                                        onClick={() =>
-                                                            setMenu('standard')
-                                                        }
-                                                    >
-                                                        Standard
-                                            </GS.MainButton>
-                                                    <div>
-                                                        {INFO.standard.total} selections
-                                            </div>
-                                                    <div>
-                                                        {INFO.standard.price} per person
-                                            </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div className="info">
-                                                    <GS.MainButton
-                                                        onClick={() => setMenu('goong')}
-                                                    >
-                                                        Goong
-                                            </GS.MainButton>
-                                                    <div>
-                                                        {INFO.goong.total} selections
-                                            </div>
-                                                    <div>
-                                                        {INFO.goong.price} per person
-                                            </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div className="info">
-                                                    <GS.MainButton
-                                                        onClick={() =>
-                                                            setMenu('premium')
-                                                        }
-                                                    >
-                                                        Premium
-                                            </GS.MainButton>
-                                                    <div>
-                                                        {INFO.premium.total} selections
-                                            </div>
-                                                    <div>
-                                                        {INFO.premium.price} per person
-                                            </div>
-                                                </div>
-                                            </div>
-                                        </GS.FlexEven>
-                                    </div>
+                                <GS.FlexEven className="ayce-button-container">
                                     <div>
-                                        <h2>AYCE Shabu Shabu Menu</h2>
-                                        <p>
-                                            Enjoy delicious AYCE hotpot with fine meat
-                                            selections
-                                </p>
                                         <div className="info">
                                             <GS.MainButton
-                                                onClick={() => setMenu('shabushabu')}
+                                                onClick={() => setMenu(standard)}
                                             >
-                                                Shabu Shabu Menu
-                                    </GS.MainButton>
+                                                Standard
+                                            </GS.MainButton>
                                             <div>
-                                                {INFO.shabushabu.total} selections
-                                    </div>
-                                            <div>
-                                                {INFO.shabushabu.price} per person
-                                    </div>
+                                                $25.95 per person
+                                            </div>
                                         </div>
                                     </div>
-                                </MenuSelector>
-                            ) : (
-                                <MenuComponent selection={menu} data={data && data} />
-                            )}
-                        </GS.MaxContainer>
-                    </GS.YCPadding>
-                </>
-            }
-        </GS.FullWidth>
+                                    <div>
+                                        <div className="info">
+                                            <GS.MainButton
+                                                onClick={() => setMenu(goong)}
+                                            >
+                                                Goong
+                                            </GS.MainButton>
+                                            <div>
+                                                $29.95 per person
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="info">
+                                            <GS.MainButton
+                                                onClick={() => setMenu(premium)}
+                                            >
+                                                Premium
+                                            </GS.MainButton>
+                                            <div>
+                                                $38.95 per person
+                                            </div>
+                                        </div>
+                                    </div>
+                                </GS.FlexEven>
+                            </div>
+                            <div>
+                                <h2>AYCE Shabu Shabu Menu</h2>
+                                <p>
+                                    Enjoy delicious AYCE hotpot with fine meat
+                                    selections
+                                </p>
+                                <div className="info">
+                                    <GS.MainButton
+                                        onClick={() => setMenu(shabushabu)}
+                                    >
+                                        Shabu Shabu Menu
+                                    </GS.MainButton>
+                                    <div>
+                                        $28.95 per person
+                                    </div>
+                                </div>
+                            </div>
+                        </MenuSelector>
+                    ) :
+                        <MenuComponent selection={menu} />
+                    }
+                </GS.MaxContainer>
+            </GS.YCPadding>
+        </Background>
     )
 }
 
-const LoadingContainer = styled.div`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+const Background = styled(GS.FullWidth)`
+    background: url('/goong-roof.png') no-repeat left bottom;
 `
 
 const MenuNavigation = styled.div`
@@ -240,7 +122,7 @@ const MenuNavigation = styled.div`
     background: #fff;
     z-index: 2;
     h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     div {
         padding: 1rem 1.5rem;
@@ -255,6 +137,7 @@ const MenuNavigation = styled.div`
         }
     }
 `
+
 const MenuSelector = styled(GS.GridTwo)`
     grid-gap: 2.5rem;
     & > div {
@@ -262,6 +145,7 @@ const MenuSelector = styled(GS.GridTwo)`
         border: 0.1rem solid #ccc;
         padding: 7.5rem 2.5rem;
         position: relative;
+        background: rgba(255,255,255,0.9);
         h2 {
             font-size: 2.1rem;
         }
@@ -290,49 +174,6 @@ const MenuSelector = styled(GS.GridTwo)`
         }
         a {
             width: 100%;
-        }
-    }
-`
-
-
-const MENU_QUERY = gql`
-    {
-        ayces {
-            ayce_type
-            meta_price
-            beefs {
-                english_name
-                korean_name
-                price
-                limit
-            }
-            chickens {
-                english_name
-                korean_name
-                price
-                limit
-            }
-            porks {
-                english_name
-                korean_name
-                price
-                limit
-            }
-            seafoods {
-                english_name
-                korean_name
-                price
-                limit
-            }
-            sides {
-                english_name
-                korean_name
-                price
-                limit
-            }
-            desserts {
-                dessert_name
-            }
         }
     }
 `

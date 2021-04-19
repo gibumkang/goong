@@ -144,3 +144,11 @@ export const FooterInformation = styled(GS.FlexEven)`
 		}
 	}
 `;
+
+export const Pattern = styled(GS.FullWidth)`
+.pattern {
+	width: 100%;
+	height: 4rem;
+	background: url('/koreanpattern-shortened.svg') repeat-x;
+}
+`
