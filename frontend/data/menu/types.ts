@@ -1,6 +1,7 @@
 interface menu {
     korean_name: string
     english_name: string
+    image?: string
     omit?: string
     limit: boolean
 }

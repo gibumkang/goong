@@ -10,6 +10,7 @@ export const STANDARD:main = {
         {
             korean_name: '차돌박이',
             english_name: 'Certified Beef Brisket',
+            image: '/brisket.jpg',
             limit: false,
         },
         {
@@ -30,6 +31,7 @@ export const STANDARD:main = {
         {
             korean_name: '불고기',
             english_name: 'Bulgogi (Marinated Sliced Rib-Eye)',
+            image: '/bulgogi.jpg',
             limit: false,
         },
         {
@@ -40,6 +42,7 @@ export const STANDARD:main = {
         {
             korean_name: 'LA갈비',
             english_name: 'LA Beef Short Ribs',
+            image: 'la-short-ribs.jpg',
             limit: true,
         },
     ],

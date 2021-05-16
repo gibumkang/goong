@@ -1,6 +1,7 @@
 import * as GS from '../styles/global';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Typography from '@material-ui/core/Typography';
 
 export default function Home() {
 	return (

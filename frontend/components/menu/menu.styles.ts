@@ -83,6 +83,16 @@ export const Column = styled(GS.GridThree)`
             }
         }
     }
+    img {
+        border: 0.5rem solid ${props => props.theme.colors.primary};
+        margin-bottom: .75rem;
+        display: block;
+        width: 100%;
+        height: auto;
+        @media screen and (min-width: ${props => props.theme.smWidth}){
+            display: none;
+        }
+    }
 `
 
 export const Container = styled.div`

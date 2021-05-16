@@ -7,6 +7,7 @@ import useOnScreen from '../../hooks/useOnScreen'
 import React, { useState, useReducer, useEffect } from 'react'
 import Tooltip from '@material-ui/core/Tooltip'
 import APPETIZERS from '../../data/menu/categories/appetizers'
+import Accordion from 'react-bootstrap/Accordion'
 
 type Food = {
     english_name: string
@@ -40,6 +41,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
                             {selection.appetizers.map((item, index) => {
                                 return (
                                     <div key={index}>
+                                        {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />}
                                         <div className="name">{item.english_name}</div>
                                         <div>{item.korean_name}</div>
                                         {item.limit && <div className="limit">Limit 1 Per Person</div>}
@@ -60,6 +62,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
                             {selection.beef.map((item, index) => {
                                 return (
                                     <div key={index}>
+                                        {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />}
                                         <div className="name">{item.english_name}</div>
                                         <div>{item.korean_name}</div>
                                         {item.limit && <div className="limit">Limit 1 Per Person</div>}
@@ -80,6 +83,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
                             {selection.chicken.map((item, index) => {
                                 return (
                                     <div key={index}>
+                                        {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />}
                                         <div className="name">{item.english_name}</div>
                                         <div>{item.korean_name}</div>
                                         {item.limit && <div className="limit">Limit 1 Per Person</div>}
@@ -100,6 +104,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
                             {selection.pork.map((item, index) => {
                                 return (
                                     <div key={index}>
+                                        {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />}
                                         <div className="name">{item.english_name}</div>
                                         <div>{item.korean_name}</div>
                                         {item.limit && <div className="limit">Limit 1 Per Person</div>}
@@ -120,6 +125,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
                             {selection.seafood.map((item, index) => {
                                 return (
                                     <div key={index}>
+                                        {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />}
                                         <div className="name">{item.english_name}</div>
                                         <div>{item.korean_name}</div>
                                         {item.limit && <div className="limit">Limit 1 Per Person</div>}
@@ -140,6 +146,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
                             {selection.dessert.map((item, index) => {
                                 return (
                                     <div key={index}>
+                                        {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />}
                                         <div className="name">{item.english_name}</div>
                                         <div>{item.korean_name}</div>
                                         {item.limit && <div className="limit">Limit 1 Per Person</div>}

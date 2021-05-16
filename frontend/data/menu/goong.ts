@@ -46,6 +46,7 @@ export const GOONG_PORK:menu[] = [
     {
         korean_name: '항정살',
         english_name: 'Pork Jowl',
+        image: '/pork-jowl.jpg',
         limit: false,
     },
 ]
@@ -55,6 +56,7 @@ export const GOONG_SEAFOOD:menu[] = [
     {
         korean_name: '갈릭 버터 새우 구이',
         english_name: 'Garlic Butter Shrimp',
+        image: '/shrimp.jpg',
         limit: false,
     }
 ]
@@ -64,6 +66,7 @@ export const GOONG:main = {
         {
             korean_name: '차돌박이',
             english_name: 'Certified Beef Brisket',
+            image: '/brisket.jpg',
             limit: false,
         },
         {
@@ -84,6 +87,7 @@ export const GOONG:main = {
         {
             korean_name: '꽃등심',
             english_name: 'Certified Angus Ribeye Steak',
+            image: '/ribeye-steak.jpg',
             limit: true,
         },
         {
@@ -104,6 +108,7 @@ export const GOONG:main = {
         {
             korean_name: "꽃살",
             english_name: "Certified Angus Boneless Short Ribs",
+            image: '/boneless-short-ribs.jpg',
             limit: true,
         },
         {
@@ -119,11 +124,13 @@ export const GOONG:main = {
         {
             korean_name: '불고기',
             english_name: 'Bulgogi (Marinated Sliced Rib-Eye)',
+            image: '/bulgogi.jpg',
             limit: false,
         },
         {
             korean_name: 'LA갈비',
             english_name: 'LA Beef Short Ribs',
+            image: 'la-short-ribs.jpg',
             limit: true,
         },
         {

@@ -10,6 +10,7 @@ export const PREMIUM:main = {
         {
             korean_name: '차돌박이',
             english_name: 'Certified Beef Brisket',
+            image: '/brisket.jpg',
             limit: false,
         },
         {
@@ -40,6 +41,7 @@ export const PREMIUM:main = {
         {
             korean_name: '꽃등심',
             english_name: 'Certified Angus Ribeye Steak',
+            image: '/ribeye-steak.jpg',
             limit: true,
         },
         {
@@ -60,11 +62,13 @@ export const PREMIUM:main = {
         {
             korean_name: "꽃살",
             english_name: "Certified Angus Boneless Short Ribs",
+            image: '/boneless-short-ribs.jpg',
             limit: true,
         },
         {
             korean_name: "안심주물럭",
             english_name: "Salted Medallion Tender Tip",
+            image: '/medallion-tenderloin.jpg',
             limit: true,
         },
         {
@@ -75,11 +79,13 @@ export const PREMIUM:main = {
         {
             korean_name: '불고기',
             english_name: 'Bulgogi (Marinated Sliced Rib-Eye)',
+            image: '/bulgogi.jpg',
             limit: false,
         },
         {
             korean_name: 'LA갈비',
             english_name: 'LA Beef Short Ribs',
+            image: 'la-short-ribs.jpg',
             limit: true,
         },
         {
