@@ -69,7 +69,7 @@ const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
                 />
                 <meta
                     name="description"
-                    content="At Kanvas we make websites simple. We specialize in creating beautiful, responsive, SEO-friendly websites for those that want complete automation."
+                    content="Goong Las Vegas is an authentic Korean BBQ restaurant with a touch of modern delicacy, offering delicious à la carte or all-you-can-eat barbeque and hotpot selections."
                 />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link

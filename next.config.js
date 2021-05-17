@@ -6,7 +6,7 @@ module.exports = {
         NEXT_PUBLIC_API_URL: 'http://localhost:1337',
     },
     images: {
-        domains: ['localhost', 'https://via.placeholder.com'],
+        domains: ['localhost', 'https://via.placeholder.com', 'goonglasvegas.com'],
     },
     webpack: (config) => {
         config.resolve.alias['components'] = path.join(__dirname, 'components')
