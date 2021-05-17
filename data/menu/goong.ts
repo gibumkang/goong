@@ -75,7 +75,6 @@ export const GOONG:main = {
         {
             korean_name: '꽃등심',
             english_name: 'Angus Ribeye Steak',
-            image: '/ribeye-steak.jpg',
             limit: true,
         },
         {
