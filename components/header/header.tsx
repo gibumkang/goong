@@ -103,11 +103,7 @@ const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
                         initial="initial"
                         animate="animate"
                     >
-                        <S.Title
-                            variants={GS.title}
-                            initial="initial"
-                            animate="animate"
-                        >
+                        <S.Title>
                             <Link href="/">
                                 <a>
                                     <img
