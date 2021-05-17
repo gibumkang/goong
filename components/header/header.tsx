@@ -109,12 +109,14 @@ const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
                             animate="animate"
                         >
                             <Link href="/">
-                                <img
-                                    src="/goong.png"
-                                    alt="Goong Las Vegas"
-                                    width="200"
-                                    height="84"
-                                />
+                                <a>
+                                    <img
+                                        src="/goong.png"
+                                        alt="Goong Las Vegas"
+                                        width="200"
+                                        height="84"
+                                    />
+                                </a>
                             </Link>
                         </S.Title>
                         <motion.div
