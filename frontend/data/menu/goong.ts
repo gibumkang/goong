@@ -20,23 +20,12 @@ export const GOONG_APPETIZERS:menu[] = [
     {
         korean_name: '콘치즈',
         english_name: 'Corn Cheese',
-        limit: true,
-    },
-    {
-        korean_name: '떡보쌈',
-        english_name: 'Rice Paper',
         limit: false,
     },
     ...APPETIZERS, 
     {
-        korean_name: '쌈무',
-        english_name: 'Pickled Radish',
-        omit: 'shabushabu',
-        limit: false,
-    },
-    {
-        korean_name: '갈릭에다마메 & 에다마메',
-        english_name: 'Garlic Edamame & Edamame',
+        korean_name: '갈릭에다마메 or 에다마메',
+        english_name: 'Garlic Edamame or Edamame',
         limit: false,
     },
 ]
@@ -65,7 +54,7 @@ export const GOONG:main = {
     beef: [
         {
             korean_name: '차돌박이',
-            english_name: 'Certified Beef Brisket',
+            english_name: 'Angus Beef Brisket',
             image: '/brisket.jpg',
             limit: false,
         },
@@ -86,14 +75,9 @@ export const GOONG:main = {
         },
         {
             korean_name: '꽃등심',
-            english_name: 'Certified Angus Ribeye Steak',
+            english_name: 'Angus Ribeye Steak',
             image: '/ribeye-steak.jpg',
             limit: true,
-        },
-        {
-            korean_name: '혀밑구이',
-            english_name: 'Beef Tongue with Lemon Salt Sauce',
-            limit: false,
         },
         {
             korean_name: '혀밑구이',
@@ -107,7 +91,7 @@ export const GOONG:main = {
         },
         {
             korean_name: "꽃살",
-            english_name: "Certified Angus Boneless Short Ribs",
+            english_name: "Angus Boneless Short Ribs",
             image: '/boneless-short-ribs.jpg',
             limit: true,
         },

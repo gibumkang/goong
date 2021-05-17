@@ -8,6 +8,17 @@ const APPETIZERS:menu[] = [
         limit: true,
     },
     {
+        korean_name: '떡보쌈',
+        english_name: 'Rice Paper',
+        limit: false,
+    },
+    {
+        korean_name: '쌈무',
+        english_name: 'Pickled Radish',
+        omit: 'shabushabu',
+        limit: false,
+    },
+    {
         korean_name: '계란찜', 
         english_name: 'Steamed Egg',
         limit: false,

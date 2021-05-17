@@ -38,10 +38,24 @@ const Menu = () => {
                     {!menu ? (
                         <MenuSelector>
                             <div>
+                                <h2>Goong AYCE Rules</h2>
+                                <ul className="rules">
+                                    <li>Kids less than 40 inches height eat fore free | between 40-50 inches will be charged kids price</li>
+                                    <li>90 min limit</li>
+                                    <li>Entire party must order from the same AYCE menu</li>
+                                    <li>Without exception, all guest who are seated at a table will be charged in full</li>
+                                    <li>Our AYCE food is for dine-in only. No togo</li>
+                                    <li>ALl food must be consumed at the restaurant; Leftovers can't be taken home</li>
+                                    <li>Extra charges will be applied to unfinished food</li>
+                                    <li>Maximum 4 credit cards per party or table</li>
+                                    <li>Grauity of 18% is included for parties of 8 or more</li>
+                                </ul>
+                            </div>
+                            <div>
                                 <h2>AYCE Korean BBQ Menu</h2>
                                 <p>
                                     A delicious 90-minute AYCE feast, available
-                                    for dinner only
+                                    all day
                                 </p>
                                 <GS.FlexEven className="ayce-button-container">
                                     <div>
@@ -95,13 +109,13 @@ const Menu = () => {
                                         Shabu Shabu Menu
                                     </GS.MainButton>
                                     <div>
-                                        $28.95 per person
+                                        $29.95 per person
                                     </div>
                                 </div>
                             </div>
                         </MenuSelector>
                     ) :
-                        <MenuComponent selection={menu} />
+                        <MenuComponent selection={menu} menuName={menuName(menu)} />
                     }
                 </GS.MaxContainer>
             </GS.YCPadding>
@@ -140,6 +154,13 @@ const MenuNavigation = styled.div`
 
 const MenuSelector = styled(GS.GridTwo)`
     grid-gap: 2.5rem;
+    .rules {
+        list-style: disc;
+        text-align: left;
+        li {
+            padding: .5rem 0rem;
+        }
+    }
     & > div {
         text-align: center;
         border: 0.1rem solid #ccc;
@@ -162,7 +183,7 @@ const MenuSelector = styled(GS.GridTwo)`
             }
         }
         .info > div {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-style: italic;
             margin: 0.25rem 0rem;
         }

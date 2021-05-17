@@ -12,11 +12,6 @@ const DESSERT:menu[] = [
         limit: false,
     },
     {
-        korean_name: '다방 커피',
-        english_name: 'Coffee',
-        limit: false,
-    },
-    {
         korean_name: '수정과',
         english_name: 'Cinnamon Tea',
         limit: false,

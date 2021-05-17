@@ -9,7 +9,7 @@ export const STANDARD:main = {
     beef: [
         {
             korean_name: '차돌박이',
-            english_name: 'Certified Beef Brisket',
+            english_name: 'Angus Beef Brisket',
             image: '/brisket.jpg',
             limit: false,
         },

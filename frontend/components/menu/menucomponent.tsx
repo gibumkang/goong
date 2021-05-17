@@ -27,9 +27,10 @@ interface Props {
         seafood: Food
         dessert: Food
     }
+    menuName: string
 }
 
-const MenuComponent: React.FC<Props> = ({ selection }) => {
+const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
     return (
         <GS.YPadding>
             {selection.appetizers && (
@@ -56,7 +57,7 @@ const MenuComponent: React.FC<Props> = ({ selection }) => {
             {selection.beef && (
                 <S.Container>
                     <div id="beef" className="anchor" />
-                    <h3>Beef</h3>
+                    <h3>{menuName === 'Shabu Shabu' ? 'Shabu Shabu Main Menu' : 'Beef'}</h3>
                     <S.Column>
                         <Fade>
                             {selection.beef.map((item, index) => {

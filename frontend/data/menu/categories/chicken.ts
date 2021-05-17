@@ -8,7 +8,7 @@ const CHICKEN:menu[] = [
     },
     {
         korean_name: '매운닭불고기',
-        english_name: 'Spicy Flavor Chicken',
+        english_name: 'Marinated Spicy Chicken',
         image: '/spicy-chicken.jpg',
         limit: false,
     },
