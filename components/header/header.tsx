@@ -110,16 +110,10 @@ const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
                         >
                             <Link href="/">
                                 <img
-                                    src="/goong.jpg"
+                                    src="/goong.png"
                                     alt="Goong Las Vegas"
                                     width="200"
                                     height="84"
-                                    loading="lazy"
-                                    className={
-                                        darkMode === true
-                                            ? 'logo-invert'
-                                            : undefined
-                                    }
                                 />
                             </Link>
                         </S.Title>
