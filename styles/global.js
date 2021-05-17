@@ -428,7 +428,6 @@ export const Arrow = styled.div`
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    //animation: ${ArrowAnimation} 2s ease-in-out infinite;
 `
 
 export const Pagination = styled(FlexEven)`

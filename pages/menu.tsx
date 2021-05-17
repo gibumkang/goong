@@ -4,6 +4,9 @@ import Fade from 'react-reveal/Fade'
 import MenuComponent from '../components/menu'
 import { useState, useEffect } from 'react'
 import useDisplayMenu from '../hooks/useDisplayMenu'
+import Accordion from 'react-bootstrap/Accordion'
+import Button from 'react-bootstrap/Accordion'
+import { CgMenuBoxed } from 'react-icons/cg'
 
 const Menu = () => {
 
@@ -33,87 +36,96 @@ const Menu = () => {
                     )}
                 </MenuNavigation>
             </Fade>
-            <GS.YCPadding padding={'15rem'}>
+            <GS.YCPadding padding={'5rem'}>
                 <GS.MaxContainer>
                     {!menu ? (
-                        <MenuSelector>
-                            <div>
-                                <h2>Goong AYCE Rules</h2>
-                                <ul className="rules">
-                                    <li>Kids less than 40 inches height eat fore free | between 40-50 inches will be charged kids price</li>
-                                    <li>90 min limit</li>
-                                    <li>Entire party must order from the same AYCE menu</li>
-                                    <li>Without exception, all guest who are seated at a table will be charged in full</li>
-                                    <li>Our AYCE food is for dine-in only. No togo</li>
-                                    <li>ALl food must be consumed at the restaurant; Leftovers can't be taken home</li>
-                                    <li>Extra charges will be applied to unfinished food</li>
-                                    <li>Maximum 4 credit cards per party or table</li>
-                                    <li>Grauity of 18% is included for parties of 8 or more</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2>AYCE Korean BBQ Menu</h2>
-                                <p>
-                                    A delicious 90-minute AYCE feast, available
-                                    all day
-                                </p>
-                                <GS.FlexEven className="ayce-button-container">
-                                    <div>
-                                        <div className="info">
-                                            <GS.MainButton
-                                                onClick={() => setMenu(standard)}
-                                            >
-                                                Standard
+                        <>
+                            <Rules>
+                                <Accordion>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                        <h3>Goong AYCE Rules</h3>
+                                        <div className="button"><CgMenuBoxed /> Click here to read</div>
+                                    </Accordion.Toggle>
+                                    <Accordion.Collapse eventKey="0">
+                                        <ul className="rules">
+                                            <li>Kids less than 40 inches height eat fore free | between 40-50 inches will be charged kids price</li>
+                                            <li>90 min limit</li>
+                                            <li>Entire party must order from the same AYCE menu</li>
+                                            <li>Without exception, all guest who are seated at a table will be charged in full</li>
+                                            <li>Our AYCE food is for dine-in only. No togo</li>
+                                            <li>ALl food must be consumed at the restaurant; Leftovers can't be taken home</li>
+                                            <li>Extra charges will be applied to unfinished food</li>
+                                            <li>Maximum 4 credit cards per party or table</li>
+                                            <li>Grauity of 18% is included for parties of 8 or more</li>
+                                        </ul>
+                                    </Accordion.Collapse>
+                                </Accordion>
+                            </Rules>
+                            <MenuSelector>
+                                <div>
+                                    <h2>AYCE Korean BBQ Menu</h2>
+                                    <p>
+                                        A delicious 90-minute AYCE feast, available
+                                        all day.
+                                    </p>
+                                    <GS.FlexEven className="ayce-button-container">
+                                        <div>
+                                            <div className="info">
+                                                <GS.MainButton
+                                                    onClick={() => setMenu(standard)}
+                                                >
+                                                    Standard
                                             </GS.MainButton>
-                                            <div>
-                                                $25.95 per person
+                                                <div>
+                                                    30+ selections <br /> <h4>$25.95 per person</h4>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div className="info">
-                                            <GS.MainButton
-                                                onClick={() => setMenu(goong)}
-                                            >
-                                                Goong
+                                        <div>
+                                            <div className="info">
+                                                <GS.MainButton
+                                                    onClick={() => setMenu(goong)}
+                                                >
+                                                    Goong
                                             </GS.MainButton>
-                                            <div>
-                                                $29.95 per person
+                                                <div>
+                                                    40+ selections <br /> <h4>$29.95 per person</h4>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div className="info">
-                                            <GS.MainButton
-                                                onClick={() => setMenu(premium)}
-                                            >
-                                                Premium
+                                        <div>
+                                            <div className="info">
+                                                <GS.MainButton
+                                                    onClick={() => setMenu(premium)}
+                                                >
+                                                    Premium
                                             </GS.MainButton>
-                                            <div>
-                                                $38.95 per person
+                                                <div>
+                                                    50 selections <br /> <h4>$38.95 per person</h4>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </GS.FlexEven>
-                            </div>
-                            <div>
-                                <h2>AYCE Shabu Shabu Menu</h2>
-                                <p>
-                                    Enjoy delicious AYCE hotpot with fine meat
-                                    selections
-                                </p>
-                                <div className="info">
-                                    <GS.MainButton
-                                        onClick={() => setMenu(shabushabu)}
-                                    >
-                                        Shabu Shabu Menu
-                                    </GS.MainButton>
-                                    <div>
-                                        $29.95 per person
+                                    </GS.FlexEven>
+                                </div>
+                                <div>
+                                    <h2>AYCE Shabu Shabu Menu</h2>
+                                    <p>
+                                        Enjoy delicious AYCE hotpot with fine meat
+                                        selections
+                                    </p>
+                                    <div className="info">
+                                        <GS.MainButton
+                                            onClick={() => setMenu(shabushabu)}
+                                        >
+                                            Shabu Shabu Menu
+                                         </GS.MainButton>
+                                        <div>
+                                            +15 selections <br /> <h4>$29.95 per person</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </MenuSelector>
+                            </MenuSelector>
+                        </>
                     ) :
                         <MenuComponent selection={menu} menuName={menuName(menu)} />
                     }
@@ -152,15 +164,35 @@ const MenuNavigation = styled.div`
     }
 `
 
-const MenuSelector = styled(GS.GridTwo)`
-    grid-gap: 2.5rem;
+const Rules = styled.div`
+    margin-bottom: 2.5rem;
+    h3, .button {
+        text-align: center;
+    }
+    .button {
+        border: .1rem solid #ccc;
+        max-width: 20rem;
+        margin: 0 auto;
+        padding: .5rem .25rem;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     .rules {
         list-style: disc;
         text-align: left;
+        padding: 1rem 4rem;
         li {
             padding: .5rem 0rem;
+            font-size: 1.4rem;
         }
     }
+`
+
+const MenuSelector = styled(GS.GridTwo)`
+    grid-gap: 2.5rem;
     & > div {
         text-align: center;
         border: 0.1rem solid #ccc;
@@ -180,6 +212,9 @@ const MenuSelector = styled(GS.GridTwo)`
             }
             @media screen and (max-width: 500px) {
                 display: block;
+                div > a {
+                    width: 50%;
+                }
             }
         }
         .info > div {
@@ -195,7 +230,15 @@ const MenuSelector = styled(GS.GridTwo)`
         }
         a {
             width: 100%;
+            @media screen and (max-width: 500px) {
+                width: 50%;
+            }
         }
+    }
+    h4 {
+        font-size: 2rem;
+        font-style: normal;
+        padding: 0rem;
     }
 `
 
