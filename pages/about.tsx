@@ -57,7 +57,7 @@ const Wrapper = styled.div`
             padding: 2.5rem;
             img {
                 display: block;
-                width: 100%;
+                width: 80%;
                 height: auto;
                 border: .2rem solid ${props => props.theme.colors.primary}
             }

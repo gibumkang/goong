@@ -4,10 +4,6 @@ export const LINKS = [
         href: '/menu',
     },
     {
-        title: 'Gallery',
-        href: '/gallery',
-    },
-    {
         title: 'About',
         href: '/about',
     },
