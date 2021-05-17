@@ -110,8 +110,8 @@ const Header = ({ toggleDarkMode, darkMode, headerMenu }) => {
                         >
                             <Link href="/">
                                 <img
-                                    src="/goong.png"
-                                    alt="Studio Kanvas"
+                                    src="/goong.jpg"
+                                    alt="Goong Las Vegas"
                                     width="200"
                                     height="84"
                                     loading="lazy"

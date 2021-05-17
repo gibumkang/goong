@@ -101,7 +101,7 @@ const Footer: React.FC<Props> = () => {
                                 {/* <h3>We make websites simple.</h3> */}
                                 <p className="disclaimer">
                                     &copy; {year} Goong Las Vegas. All Rights
-                                Reserved.{' '}
+                                Reserved.<br />
                                     <Link href="https://studiokanvas.com">
                                         <a>Website by Studio Kanvas</a>
                                     </Link>
