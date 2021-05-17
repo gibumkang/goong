@@ -4,7 +4,6 @@ const APPETIZERS:menu[] = [
     {
         korean_name: '김치찌개/된장찌개/순두부찌개',
         english_name: 'Kimchi Stew/Soybean Stew/Spicy Tofu',
-        omit: 'shabushabu',
         limit: true,
     },
     {
@@ -15,7 +14,6 @@ const APPETIZERS:menu[] = [
     {
         korean_name: '쌈무',
         english_name: 'Pickled Radish',
-        omit: 'shabushabu',
         limit: false,
     },
     {
@@ -46,7 +44,6 @@ const APPETIZERS:menu[] = [
     {
         korean_name: '모듬야채',
         english_name: 'Mushroom and Vegetables',
-        omit: 'shabushabu',
         limit: false,
     },
     {

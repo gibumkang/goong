@@ -14,7 +14,6 @@ export const GOONG_APPETIZERS:menu[] = [
     {
         korean_name: '김치 볶음밥/불고기 볶음밥/치킨 볶음밥',
         english_name: 'Choice of fried rice (kimchi/bulgogi/chicken)',
-        omit: 'shabushabu',
         limit: true,
     },
     {

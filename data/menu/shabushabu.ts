@@ -5,8 +5,7 @@ import SEAFOOD from './categories/seafood'
 import DESSERT from './categories/dessert'
 import {main} from './types'
 
-const SHABUSHABU_APPETIZERS: Function = () =>  {
-    const filtered = [
+const SHABUSHABU_APPETIZERS: Function = () => [
         {
             korean_name: '계란찜', 
             english_name: 'Steamed Egg',
@@ -47,9 +46,7 @@ const SHABUSHABU_APPETIZERS: Function = () =>  {
             english_name: 'Garlic Edamame or Edamame',
             limit: false,
         },
-    ].filter(menu => menu.omit != 'shabushabu')
-    return filtered
-}
+]
 
 export const SHABUSHABU:main = {
     beef: [
