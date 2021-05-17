@@ -77,7 +77,7 @@ const Menu = () => {
                                                     Standard
                                             </GS.MainButton>
                                                 <div>
-                                                    30+ selections <br /> <h4>$25.95 per person</h4><div className="kid-price">$11.95 for kids</div>
+                                                    30+ selections <br /> <h4>$25.95 per person</h4><div className="kid-price">$13.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@ const Menu = () => {
                                                     Goong
                                             </GS.MainButton>
                                                 <div>
-                                                    40+ selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$13.95 for kids</div>
+                                                    40+ selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -101,7 +101,7 @@ const Menu = () => {
                                                     Premium
                                             </GS.MainButton>
                                                 <div>
-                                                    50 selections <br /> <h4>$38.95 per person</h4><div className="kid-price">$18.95 for kids</div>
+                                                    50 selections <br /> <h4>$38.95 per person</h4><div className="kid-price">$20.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,7 +120,7 @@ const Menu = () => {
                                             Shabu Shabu Menu
                                          </GS.MainButton>
                                         <div>
-                                            +15 selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$13.95 for kids</div>
+                                            +15 selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                         </div>
                                     </div>
                                 </div>
