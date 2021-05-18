@@ -3,7 +3,7 @@ import * as GS from '../../styles/global'
 import * as S from './footer.styles'
 import { LINKS } from '../../data/links'
 import { NextRouter, useRouter } from 'next/router'
-// import { GoMail } from 'react-icons/Go'
+import styled from 'styled-components';
 import { FaPhoneSquareAlt } from 'react-icons/fa'
 import React, { useContext, useEffect, useState } from 'react'
 
@@ -29,82 +29,79 @@ const Footer: React.FC<Props> = () => {
     return (
         <>
             <S.Pattern><div className="pattern" /></S.Pattern>
+            <Instagram>
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div className="elfsight-app-b8cf707b-469e-4953-a4c0-abfc05c63d9b"></div>
+            </Instagram>
             <S.FooterBg>
                 <GS.MaxContainer>
-                    {footer != null && (
-                        <S.FooterInformation>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <Link href="/">
-                                            <a>
-                                                <img
-                                                    height="60"
-                                                    width="100"
-                                                    loading="lazy"
-                                                    src="/goong.png"
-                                                    alt="Las Vegas Goong"
-                                                />
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li>{footer.street_address}</li>
-                                    <li>{footer.city_address}</li>
-                                    {/* {footer.email && (
-                                    <li>
-                                        <Link href={`mailto:#`}>
-                                            <a>
-                                                <GoMail /> {footer.email}
-                                            </a>
-                                        </Link>
-                                    </li>
-                                )} */}
-                                    <li className="phone">
-                                        <Link href={`tel:${footer.phone}`}>
-                                            <a>
-                                                <FaPhoneSquareAlt /> {footer.phone}
-                                            </a>
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    {LINKS.map((link) => {
-                                        return (
-                                            <li key={link.title}>
-                                                <Link href={link.href}>
-                                                    <a
-                                                        className={
-                                                            router.pathname ===
-                                                                link.href
-                                                                ? 'active'
-                                                                : undefined
-                                                        }
-                                                    >
-                                                        {link.title}
-                                                    </a>
-                                                </Link>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                                <GS.HR />
-                                {/* <h3>We make websites simple.</h3> */}
-                                <p className="disclaimer">
-                                    &copy; {year} Goong Las Vegas. All Rights
-                                Reserved.<br />
-                                    <Link href="https://studiokanvas.com">
-                                        <a>Website by Studio Kanvas</a>
+                    <S.FooterInformation>
+                        <div>
+                            <ul>
+                                <li>
+                                    <Link href="/">
+                                        <a>
+                                            <img
+                                                height="60"
+                                                width="100"
+                                                loading="lazy"
+                                                src="/goong.png"
+                                                alt="Las Vegas Goong"
+                                            />
+                                        </a>
                                     </Link>
-                                </p>
-                            </div>
-                        </S.FooterInformation>
-                    )}
+                                </li>
+                                <li>7729 S Rainbow Blvd #5</li>
+                                <li>Las Vegas, NV 89139</li>
+                                <li className="phone">
+                                    <Link href="tel:702.861.3976">
+                                        <a>
+                                            <FaPhoneSquareAlt /> 702.861.3976
+                                        </a>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                {LINKS.map((link) => {
+                                    return (
+                                        <li key={link.title}>
+                                            <Link href={link.href}>
+                                                <a
+                                                    className={
+                                                        router.pathname ===
+                                                            link.href
+                                                            ? 'active'
+                                                            : undefined
+                                                    }
+                                                >
+                                                    {link.title}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                            <GS.HR />
+                            {/* <h3>We make websites simple.</h3> */}
+                            <p className="disclaimer">
+                                &copy; 2021 Goong Las Vegas. All Rights
+                                Reserved.<br />
+                                <Link href="https://studiokanvas.com">
+                                    <a>Website by Studio Kanvas</a>
+                                </Link>
+                            </p>
+                        </div>
+                    </S.FooterInformation>
                 </GS.MaxContainer>
             </S.FooterBg>
         </>
     )
 }
+
+const Instagram = styled.div`
+    margin: 0 auto;
+`
 
 export default Footer
