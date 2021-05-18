@@ -3,7 +3,6 @@ import 'pattern.css/dist/pattern.min.css';
 import 'tailwindcss/tailwind.css';
 import Layout from '../components/layout/layout';
 import { createGlobalStyle } from 'styled-components';
-import withData from '../lib/apolloClient';
 
 const GlobalStyle = createGlobalStyle`
   body {
