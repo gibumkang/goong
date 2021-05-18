@@ -4,8 +4,6 @@ import * as S from './footer.styles'
 import { LINKS } from '../../data/links'
 import { NextRouter, useRouter } from 'next/router'
 // import { GoMail } from 'react-icons/Go'
-import { useQuery } from '@apollo/react-hooks'
-import { gql } from 'apollo-boost'
 import { FaPhoneSquareAlt } from 'react-icons/fa'
 import React, { useContext, useEffect, useState } from 'react'
 
@@ -25,15 +23,9 @@ interface Data {
 }
 
 const Footer: React.FC<Props> = () => {
-    const { loading, error, data } = useQuery(FOOTER_QUERY)
     const year: number = new Date().getFullYear()
     const [footer, setFooter] = useState<Data | null>(null)
     const router: NextRouter = useRouter()
-    useEffect(() => {
-        if (data) {
-            setFooter(data.assets[0])
-        }
-    }, [data])
     return (
         <>
             <S.Pattern><div className="pattern" /></S.Pattern>
@@ -114,20 +106,5 @@ const Footer: React.FC<Props> = () => {
         </>
     )
 }
-
-const FOOTER_QUERY = gql`
-    {
-        assets {
-            logo {
-                url
-                caption
-            }
-            phone
-            email
-            street_address
-            city_address
-        }
-    }
-`
 
 export default Footer
