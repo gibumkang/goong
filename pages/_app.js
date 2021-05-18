@@ -23,4 +23,4 @@ function MyApp({ Component, pageProps }) {
 	);
 }
 
-export default withData(MyApp);
+export default MyApp;
