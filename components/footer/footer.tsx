@@ -5,7 +5,7 @@ import { LINKS } from '../../data/links'
 import { NextRouter, useRouter } from 'next/router'
 import styled from 'styled-components';
 import { FaPhoneSquareAlt } from 'react-icons/fa'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 interface Props {
     darkMode: string
@@ -86,7 +86,7 @@ const Footer: React.FC<Props> = () => {
                             <GS.HR />
                             {/* <h3>We make websites simple.</h3> */}
                             <p className="disclaimer">
-                                &copy; 2021 Goong Las Vegas. All Rights
+                                &copy; ${year} Goong Las Vegas. All Rights
                                 Reserved.<br />
                                 <Link href="https://studiokanvas.com">
                                     <a>Website by Studio Kanvas</a>

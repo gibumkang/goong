@@ -45,18 +45,19 @@ const Menu = () => {
                                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
                                         <h3>Goong AYCE Rules</h3>
                                         <div className="button"><CgMenuBoxed /> Click here to read</div>
+                                        <div className="disclaimer">Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.</div>
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey="0">
                                         <ul className="rules">
-                                            <li>Kids less than 40 inches height eat fore free | between 40-50 inches will be charged kids price</li>
-                                            <li>90 min limit</li>
+                                            <li>Kids less than 40 inches height eat for free | between 40-50 inches will be charged kids price</li>
+                                            <li>90 min time limit</li>
                                             <li>Entire party must order from the same AYCE menu</li>
                                             <li>Without exception, all guest who are seated at a table will be charged in full</li>
-                                            <li>Our AYCE food is for dine-in only. No togo</li>
-                                            <li>ALl food must be consumed at the restaurant; Leftovers can't be taken home</li>
+                                            <li>Our AYCE food is for dine-in only. No for to-go</li>
+                                            <li>All food must be consumed at the restaurant; Leftovers can't be taken home</li>
                                             <li>Extra charges will be applied to unfinished food</li>
                                             <li>Maximum 4 credit cards per party or table</li>
-                                            <li>Grauity of 18% is included for parties of 8 or more</li>
+                                            <li>18% gratuity is included for parties of 8 or more</li>
                                         </ul>
                                     </Accordion.Collapse>
                                 </Accordion>
@@ -101,7 +102,7 @@ const Menu = () => {
                                                     Premium
                                             </GS.MainButton>
                                                 <div>
-                                                    50 selections <br /> <h4>$38.95 per person</h4><div className="kid-price">$20.95 for kids</div>
+                                                    50+ selections <br /> <h4>$38.95 per person</h4><div className="kid-price">$20.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,7 +121,7 @@ const Menu = () => {
                                             Shabu Shabu Menu
                                          </GS.MainButton>
                                         <div>
-                                            +15 selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
+                                            15+ selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                         </div>
                                     </div>
                                 </div>
@@ -188,6 +189,12 @@ const Rules = styled.div`
             padding: .5rem 0rem;
             font-size: 1.4rem;
         }
+    }
+    .disclaimer {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+        opacity: .7;
     }
 `
 
