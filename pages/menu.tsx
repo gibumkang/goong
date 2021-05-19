@@ -90,7 +90,7 @@ const Menu = () => {
                                                     Goong
                                             </GS.MainButton>
                                                 <div>
-                                                    40+ selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
+                                                    40+ selections <br /> <h4>$31.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
