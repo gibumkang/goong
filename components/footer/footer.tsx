@@ -86,7 +86,7 @@ const Footer: React.FC<Props> = () => {
                             <GS.HR />
                             {/* <h3>We make websites simple.</h3> */}
                             <p className="disclaimer">
-                                &copy; ${year} Goong Las Vegas. All Rights
+                                &copy; {year} Goong Las Vegas. All Rights
                                 Reserved.<br />
                                 <Link href="https://studiokanvas.com">
                                     <a>Website by Studio Kanvas</a>
