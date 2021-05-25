@@ -54,9 +54,9 @@ const Footer: React.FC<Props> = () => {
                                 <li>7729 S Rainbow Blvd #5</li>
                                 <li>Las Vegas, NV 89139</li>
                                 <li className="phone">
-                                    <Link href="tel:702.861.3976">
+                                    <Link href="tel:7029799118">
                                         <a>
-                                            <FaPhoneSquareAlt /> 702.861.3976
+                                            <FaPhoneSquareAlt /> 702.979.9118
                                         </a>
                                     </Link>
                                 </li>
