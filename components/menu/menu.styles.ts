@@ -84,12 +84,12 @@ export const Column = styled(GS.GridThree)`
         }
     }
     img {
-        border: 0.5rem solid ${props => props.theme.colors.primary};
-        margin-bottom: .75rem;
+        border: 0.5rem solid ${(props) => props.theme.colors.primary};
+        margin-bottom: 0.75rem;
         display: block;
         width: 100%;
         height: auto;
-        @media screen and (min-width: ${props => props.theme.smWidth}){
+        @media screen and (min-width: ${(props) => props.theme.smWidth}) {
             display: none;
         }
     }
@@ -97,17 +97,26 @@ export const Column = styled(GS.GridThree)`
 
 export const Container = styled.div`
     padding: 5rem 0rem;
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 40rem;
+        height: auto;
+        @media screen and (max-width: 50rem) {
+            width: 100%;
+        }
+    }
     h3 {
         text-align: center;
         padding-bottom: 0.5rem;
         margin-bottom: 2.5rem;
-        border-bottom: 0.1rem solid ${props => props.theme.colors.primary};
+        border-bottom: 0.1rem solid ${(props) => props.theme.colors.primary};
     }
     .anchor {
         display: block;
         visibility: hidden;
         position: relative;
-        top: -10rem;
+        top: -6rem;
     }
 `
 
@@ -117,29 +126,63 @@ export const MenuSelector = styled(GS.FlexEven)`
     }
 `
 
-export const FooterNavigation = styled.div`
+export const Nav = styled(GS.FlexEven)`
+    background: #eee;
     position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    padding: 1.5rem 1.5rem 3rem 1.5rem;
-    background: #fff;
-    z-index: 2;
-    border-top: 0.1rem solid #ccc;
-    ul {
-        margin: 0 auto;
+    height: auto;
+    padding: 3.5rem ${(props) => props.theme.padding};
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    .option {
+        position: absolute;
+        top: -1rem;
+        font-size: 1.4rem;
+        background: #eee;
+        padding: 0.5rem 2rem;
+        border-radius: 1rem;
+        font-family: ${(props) => props.theme.fonts.header};
+        color: #444;
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    .container {
+        overflow-x: auto;
+        white-space: nowrap;
         text-align: center;
-        li {
-            display: inline;
-            padding: 0rem 0.75rem;
-            a {
-                font-size: 1.3rem;
-                text-decoration: none;
-                border-bottom: 0.1rem solid #999;
-                color: #555;
+        a {
+            padding-right: 3.5rem;
+            display: inline-block;
+            text-decoration: none;
+            font-family: ${(props) => props.theme.fonts.header};
+            &:hover {
+                color: ${(props) => props.theme.colors.primary};
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                border-radius: 50%;
+                margin: 1rem auto;
+                max-width: 5rem;
+                height: auto;
+                transition: all 0.25s ease-in-out;
+                transform: scale(1);
+                opacity: 0.5;
                 &:hover {
-                    color: #000;
+                    opacity: 1;
+                    cursor: pointer;
+                    transform: scale(1.1);
                 }
+            }
+        }
+        & > div {
+            display: inline-block;
+            flex: 1;
+            &:hover {
+                cursor: pointer;
             }
         }
     }

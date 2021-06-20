@@ -3,7 +3,6 @@ import * as GS from '../../styles/global'
 import * as S from './footer.styles'
 import { LINKS } from '../../data/links'
 import { NextRouter, useRouter } from 'next/router'
-import styled from 'styled-components';
 import { FaPhoneSquareAlt } from 'react-icons/fa'
 import React, { useState } from 'react'
 
@@ -29,10 +28,6 @@ const Footer: React.FC<Props> = () => {
     return (
         <>
             <S.Pattern><div className="pattern" /></S.Pattern>
-            <Instagram>
-                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                <div className="elfsight-app-b8cf707b-469e-4953-a4c0-abfc05c63d9b"></div>
-            </Instagram>
             <S.FooterBg>
                 <GS.MaxContainer>
                     <S.FooterInformation>
@@ -84,7 +79,6 @@ const Footer: React.FC<Props> = () => {
                                 })}
                             </ul>
                             <GS.HR />
-                            {/* <h3>We make websites simple.</h3> */}
                             <p className="disclaimer">
                                 &copy; {year} Goong Las Vegas. All Rights
                                 Reserved.<br />
@@ -99,9 +93,5 @@ const Footer: React.FC<Props> = () => {
         </>
     )
 }
-
-const Instagram = styled.div`
-    margin: 0 auto;
-`
 
 export default Footer

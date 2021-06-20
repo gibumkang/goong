@@ -19,14 +19,15 @@ export default function Home() {
 				<video src="/intro.m4v" autoPlay muted loop playsInline />
 				<div className="overlay" />
 			</GS.BGVideo>
+			<Instagram>
+				<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+				<div className="elfsight-app-b8cf707b-469e-4953-a4c0-abfc05c63d9b"></div>
+			</Instagram>
 		</>
 	);
 }
 
-const MainButton = styled(GS.MainButton)`
-	position: absolute;
-	z-index: 20;
-	bottom: 0;
-	left: 0;
+const Instagram = styled.div`
+    margin: 0 auto;
 `
 
