@@ -76,7 +76,7 @@ const Menu = () => {
                                                     onClick={() => setMenu(standard)}
                                                 >
                                                     Standard
-                                            </GS.MainButton>
+                                                </GS.MainButton>
                                                 <div>
                                                     30+ selections <br /> <h4>$25.95 per person</h4><div className="kid-price">$13.95 for kids</div>
                                                 </div>
@@ -88,7 +88,7 @@ const Menu = () => {
                                                     onClick={() => setMenu(goong)}
                                                 >
                                                     Goong
-                                            </GS.MainButton>
+                                                </GS.MainButton>
                                                 <div>
                                                     40+ selections <br /> <h4>$31.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                                 </div>
@@ -100,13 +100,30 @@ const Menu = () => {
                                                     onClick={() => setMenu(premium)}
                                                 >
                                                     Premium
-                                            </GS.MainButton>
+                                                </GS.MainButton>
                                                 <div>
                                                     50+ selections <br /> <h4>$38.95 per person</h4><div className="kid-price">$20.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </GS.FlexEven>
+                                </div>
+                                <div>
+                                    <h2>À la carte Menu</h2>
+                                    <p>
+                                        A curated Korean culinary experience
+                                    </p>
+                                    <div className="info">
+                                        <GS.MainButton href="/goong_menu.pdf" target="_blank"
+                                        >
+                                            <a>
+                                                à la carte Menu
+                                            </a>
+                                        </GS.MainButton>
+                                        <div>
+                                            Pay for each order
+                                        </div>
+                                    </div>
                                 </div>
                                 <div>
                                     <h2>AYCE Shabu Shabu Menu</h2>
@@ -119,7 +136,7 @@ const Menu = () => {
                                             onClick={() => setMenu(shabushabu)}
                                         >
                                             Shabu Shabu Menu
-                                         </GS.MainButton>
+                                        </GS.MainButton>
                                         <div>
                                             15+ selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                         </div>
@@ -198,14 +215,14 @@ const Rules = styled.div`
     }
 `
 
-const MenuSelector = styled(GS.GridTwo)`
-    grid-gap: 2.5rem;
+const MenuSelector = styled.div`
     & > div {
         text-align: center;
         border: 0.1rem solid #ccc;
         padding: 7.5rem 2.5rem;
         position: relative;
         background: rgba(255,255,255,0.9);
+        margin-bottom: 2.5rem;
         h2 {
             font-size: 2.1rem;
         }
@@ -232,9 +249,6 @@ const MenuSelector = styled(GS.GridTwo)`
     }
     @media screen and (max-width: 900px) {
         display: block;
-        div {
-            margin-bottom: 2.5rem;
-        }
         a {
             width: 100%;
             @media screen and (max-width: 500px) {
