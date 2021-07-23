@@ -4,7 +4,7 @@ const green = '#53B21F'
 export const theme = {
     fonts: {
         main: 'DM Sans', //fonts located in header file
-        header: 'Din',
+        header: 'Quattrocento',
         reading: '2rem',
     },
     padding: '2.5rem',

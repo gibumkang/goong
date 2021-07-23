@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 2rem;
     }
     a {
-        text-decoration: underline;
+        text-decoration: none;
     }
     .popover-header {
         background: ${(props) => props.theme.colors.background};
@@ -214,6 +214,38 @@ const GlobalStyle = createGlobalStyle`
     }
     .mr-5 {
         margin-right: 5rem;
+    }
+    .modal-content {
+        .modal-header {
+            padding: 2rem 3rem;
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        .modal-body {
+            ol {
+                margin: 3rem auto;
+                li {
+                    margin: 2rem auto;
+                }
+            }
+        }
+    }
+    .accordion {
+        .btn {
+            margin: 1rem 0rem;
+            padding: 0;
+            color: #000;
+        }
+        .collapse.show {
+            padding: 0rem;
+            color: #333;
+        }
+        svg {
+            position: relative;
+            bottom: .1rem;
+            margin-right: .25rem;
+        }
     }
 `
 

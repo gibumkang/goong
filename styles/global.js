@@ -242,7 +242,7 @@ export const GridTwo = styled.div`
     grid-template-columns: repeat(2, 1fr);
     @media screen and (max-width: ${(props) => props.theme.smWidth}) {
         display: block;
-        div {
+        & > div {
             margin: ${(props) => props.theme.padding} 0rem;
         }
     }

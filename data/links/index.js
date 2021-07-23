@@ -1,10 +1,10 @@
 export const LINKS = [
     {
-        title: 'Menu',
-        href: '/menu',
+        title: 'Home',
+        href: '/',
     },
     {
-        title: 'About',
-        href: '/about',
+        title: 'Menu',
+        href: '/menu',
     },
 ]
