@@ -1,11 +1,11 @@
-import {GOONG_APPETIZERS as APPETIZERS} from './goong'
+import { GOONG_APPETIZERS as APPETIZERS } from './goong'
 import CHICKEN from './categories/chicken'
-import {GOONG_PORK as PORK} from './goong'
-import {GOONG_SEAFOOD as SEAFOOD} from './goong'
+import { GOONG_PORK as PORK } from './goong'
+import { GOONG_SEAFOOD as SEAFOOD } from './goong'
 import DESSERT from './categories/dessert'
-import {main} from './types'
+import { main } from './types'
 
-export const PREMIUM:main = {
+export const PREMIUM: main = {
     beef: [
         {
             korean_name: '차돌박이',
@@ -15,22 +15,22 @@ export const PREMIUM:main = {
         },
         {
             korean_name: '양념 차돌박이',
-            english_name: "Marinated Angus Brisket",
+            english_name: 'Marinated Angus Brisket',
             limit: false,
         },
         {
             korean_name: '와규 차돌박이',
-            english_name: "Wagyu Brisket",
+            english_name: 'Wagyu Brisket',
             limit: true,
         },
         {
-            korean_name: "토시살",
-            english_name: "Prime Hanging Tender",
+            korean_name: '토시살',
+            english_name: 'Prime Hanging Tender',
             limit: true,
         },
         {
-            korean_name: "낙엽살",
-            english_name: "Prime Sliced Top Blade",
+            korean_name: '낙엽살',
+            english_name: 'Prime Sliced Top Blade',
             limit: true,
         },
         {
@@ -46,28 +46,28 @@ export const PREMIUM:main = {
         {
             korean_name: '혀밑구이',
             english_name: 'Beef Tongue with Lemon Salt Sauce',
+            limit: true,
+        },
+        {
+            korean_name: '우삼겹',
+            english_name: 'Angus Beef Short Plate',
             limit: false,
         },
         {
-            korean_name: "우삼겹",
-            english_name: "Angus Beef Short Plate",
-            limit: false,
-        },
-        {
-            korean_name: "꽃살",
-            english_name: "Angus Boneless Short Ribs",
+            korean_name: '꽃살',
+            english_name: 'Angus Boneless Short Ribs',
             image: '/boneless-short-ribs.jpg',
             limit: true,
         },
         {
-            korean_name: "안심주물럭",
-            english_name: "Salted Medallion Tender Tip",
+            korean_name: '안심주물럭',
+            english_name: 'Salted Medallion Tender Tip',
             image: '/medallion-tenderloin.jpg',
             limit: true,
         },
         {
-            korean_name: "늑간살",
-            english_name: "Marinated Finger Short Ribs",
+            korean_name: '늑간살',
+            english_name: 'Marinated Finger Short Ribs',
             limit: false,
         },
         {
@@ -109,7 +109,7 @@ export const PREMIUM:main = {
         //     english_name: 'Fried Calamari Rings',
         //     limit: false,
         // },
-        ...APPETIZERS
+        ...APPETIZERS,
     ],
     chicken: CHICKEN,
     pork: PORK,
@@ -117,9 +117,9 @@ export const PREMIUM:main = {
         {
             korean_name: '왕새우',
             english_name: 'Black Tiger Shrimp (2 PCS)',
-            limit: true,    
+            limit: true,
         },
-        ...SEAFOOD
+        ...SEAFOOD,
     ],
     dessert: [
         ...DESSERT,
@@ -128,5 +128,5 @@ export const PREMIUM:main = {
             english_name: 'Mini Red Bean Shaved Ice',
             limit: true,
         },
-    ]
+    ],
 }
