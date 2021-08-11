@@ -112,6 +112,10 @@ export const Container = styled.div`
         margin-bottom: 2.5rem;
         border-bottom: 0.1rem solid ${(props) => props.theme.colors.primary};
     }
+    h4 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
     .anchor {
         display: block;
         visibility: hidden;

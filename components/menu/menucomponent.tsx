@@ -154,6 +154,7 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
                 <S.Container>
                     <div id="dessert" className="anchor" />
                     <img src="/header-dessert.webp" alt="Goong Desserts selections" loading="lazy" />
+                    <h4>Desserts are limited to one per person</h4>
                     <S.Column>
                         <Fade>
                             {selection.dessert.map((item, index) => {
