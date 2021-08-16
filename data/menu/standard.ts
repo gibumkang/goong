@@ -3,9 +3,9 @@ import CHICKEN from './categories/chicken'
 import PORK from './categories/pork'
 import SEAFOOD from './categories/seafood'
 import DESSERT from './categories/dessert'
-import {main} from './types'
+import { DRINKS } from './drinks'
 
-export const STANDARD:main = {
+export const STANDARD = {
     beef: [
         {
             korean_name: '차돌박이',
@@ -15,12 +15,12 @@ export const STANDARD:main = {
         },
         {
             korean_name: '양념 차돌박이',
-            english_name: "Marinated Angus Brisket",
+            english_name: 'Marinated Angus Brisket',
             limit: false,
         },
         {
-            korean_name: "우삼겹",
-            english_name: "Angus Beef Short Plate",
+            korean_name: '우삼겹',
+            english_name: 'Angus Beef Short Plate',
             limit: false,
         },
         {
@@ -46,7 +46,8 @@ export const STANDARD:main = {
             limit: true,
         },
     ],
-    appetizers: [...APPETIZERS, 
+    appetizers: [
+        ...APPETIZERS,
         {
             korean_name: '에다마메',
             english_name: 'Edamame',
@@ -58,4 +59,3 @@ export const STANDARD:main = {
     seafood: SEAFOOD,
     dessert: DESSERT,
 }
-        

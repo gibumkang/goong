@@ -49,7 +49,7 @@ export const GOONG_SEAFOOD: menu[] = [
     },
 ]
 
-export const GOONG: main = {
+export const GOONG = {
     beef: [
         {
             korean_name: '차돌박이',

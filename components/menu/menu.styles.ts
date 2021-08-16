@@ -77,9 +77,9 @@ export const Column = styled(GS.GridThree)`
         display: block;
         & > div {
             padding: 3rem 0rem;
-            &:nth-of-type(2n) {
-                border-top: 0.1rem solid rgba(0, 0, 0, 0.05);
-                border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+            border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+            &:nth-last-child(1) {
+                border-bottom: none;
             }
         }
     }

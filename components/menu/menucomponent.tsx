@@ -21,6 +21,14 @@ type Food = {
     length?: number
 }
 
+type Drinks = {
+    english_name: string
+    korean_name?: string
+    price: number
+    bottlePrice?: number
+    map?: Function
+}
+
 interface Props {
     selection: {
         appetizers: Food
@@ -31,9 +39,21 @@ interface Props {
         dessert: Food
     }
     menuName: string
+    drinks: {
+        nonAlcoholic: Drinks
+        beer: Drinks
+        cocktail: Drinks
+        koreanwine: Drinks
+        sake: Drinks
+        soju: Drinks
+        shochu: Drinks
+        whisky: Drinks
+        wine: Drinks
+    }
 }
 
-const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
+const MenuComponent: React.FC<Props> = ({ selection, menuName, drinks }) => {
+    console.log(menuName);
     const window = useWindowSize()
     const [isNavInfoVisible, setIsNavInfoVisible] = useState(false)
     useEffect(() => {
@@ -48,7 +68,7 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
             {selection.appetizers && (
                 <S.Container>
                     <div id="appetizers" className="anchor" />
-                    <img src="/header-appetizers.webp" alt="Goong Appetizers selections" loading="lazy" />
+                    {menuName != 'Shabu Shabu' && <img src="/header-appetizers.webp" alt="Goong Appetizer selections" loading="lazy" />}
                     <S.Column>
                         <Fade>
                             {selection.appetizers.map((item, index) => {
@@ -153,7 +173,7 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
             {selection.dessert && (
                 <S.Container>
                     <div id="dessert" className="anchor" />
-                    <img src="/header-dessert.webp" alt="Goong Desserts selections" loading="lazy" />
+                    <img src="/header-dessert.webp" alt="Goong Dessert selections" loading="lazy" />
                     <h4>Desserts are limited to one per person</h4>
                     <S.Column>
                         <Fade>
@@ -171,7 +191,185 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
                     </S.Column>
                 </S.Container>
             )}
-            {selection && (
+
+            {drinks && (
+                <S.Container>
+                    <div id="drinks" className="anchor" />
+                    <img src="/header-drinks.jpg" alt="Goong Drink selections" loading="lazy" />
+                    <h4>Non Alcoholic Beverages</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.nonAlcoholic.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Soju</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.soju.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Cocktail</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.cocktail.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Beer</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.beer.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Korean Wine</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.koreanwine.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Sake</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.sake.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Shochu</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.shochu.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Whisky</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.whisky.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+
+                    <h4>Wine</h4>
+                    <S.Column>
+                        <Fade>
+                            {drinks.wine.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {/* {item.image && <img src={item.image} loading="lazy" width="1124" height="750" />} */}
+                                        <div className="name">{item.english_name}</div>
+                                        <div>{item.korean_name}</div>
+                                        <div>${item.price} {item.bottlePrice && `/ ${item.bottlePrice}`}</div>
+                                    </div>
+                                )
+                            })}
+                        </Fade>
+                    </S.Column>
+                </S.Container>
+            )}
+
+            {menuName === 'Shabu Shabu' ? (
+                <S.Nav>
+                    {/* onClick={() => setIsNavCollapsed(true)} and <IoIosArrowDropdownCircle /> */}
+                    <div className={`option ${isNavInfoVisible && 'show'}`}>
+                        Scroll horizontally to see more
+                    </div>
+                    <div className="container">
+                        <div>
+                            <a href="#appetizers">
+                                <img src="/thumbnail-beef.jpg" alt="Goong Beef selections" loading="lazy" />
+                                Main Menu
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#dessert">
+                                <img src="/thumbnail-dessert.jpg" alt="Goong Dessert selections" loading="lazy" />
+                                Dessert
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#drinks">
+                                <img src="/thumbnail-drinks.jpg" alt="Goong Drink selections" loading="lazy" />
+                                Drinks
+                            </a>
+                        </div>
+                    </div>
+                </S.Nav>
+            ) : (
                 <S.Nav>
                     {/* onClick={() => setIsNavCollapsed(true)} and <IoIosArrowDropdownCircle /> */}
                     <div className={`option ${isNavInfoVisible && 'show'}`}>
@@ -212,6 +410,12 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName }) => {
                             <a href="#dessert">
                                 <img src="/thumbnail-dessert.jpg" alt="Goong Dessert selections" loading="lazy" />
                                 Dessert
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#drinks">
+                                <img src="/thumbnail-drinks.jpg" alt="Goong Drink selections" loading="lazy" />
+                                Drinks
                             </a>
                         </div>
                     </div>

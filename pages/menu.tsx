@@ -10,7 +10,7 @@ import { CgMenuBoxed } from 'react-icons/cg'
 
 const Menu = () => {
 
-    const { standard, goong, premium, shabushabu } = useDisplayMenu()
+    const { standard, goong, premium, shabushabu, drinks } = useDisplayMenu()
     const [menu, setMenu] = useState(null)
 
     const menuName = menu => {
@@ -138,14 +138,14 @@ const Menu = () => {
                                             Shabu Shabu Menu
                                         </GS.MainButton>
                                         <div>
-                                            15+ selections <br /> <h4>$29.95 per person</h4><div className="kid-price">$15.95 for kids</div>
+                                            15+ selections <br /> <h4>$31.95 per person</h4><div className="kid-price">$15.95 for kids</div>
                                         </div>
                                     </div>
                                 </div>
                             </MenuSelector>
                         </>
                     ) :
-                        <MenuComponent selection={menu} menuName={menuName(menu)} />
+                        <MenuComponent selection={menu} drinks={drinks} menuName={menuName(menu)} />
                     }
                 </GS.MaxContainer>
             </GS.YCPadding>

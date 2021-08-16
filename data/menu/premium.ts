@@ -3,9 +3,8 @@ import CHICKEN from './categories/chicken'
 import { GOONG_PORK as PORK } from './goong'
 import { GOONG_SEAFOOD as SEAFOOD } from './goong'
 import DESSERT from './categories/dessert'
-import { main } from './types'
 
-export const PREMIUM: main = {
+export const PREMIUM = {
     beef: [
         {
             korean_name: '차돌박이',

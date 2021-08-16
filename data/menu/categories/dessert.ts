@@ -1,6 +1,7 @@
 import menu from '../types'
 
-const DESSERT:menu[] = [
+//maps through an array of objects
+const DESSERT: menu[] = [
     {
         korean_name: '식혜',
         english_name: 'Korean Sweet Rice Punch',
