@@ -23,8 +23,8 @@ type Food = {
 
 type Drinks = {
     english_name: string
-    korean_name?: string
     price: number
+    korean_name?: string
     bottlePrice?: number
     map?: Function
 }
@@ -39,17 +39,7 @@ interface Props {
         dessert: Food
     }
     menuName: string
-    drinks: {
-        nonAlcoholic: Drinks
-        beer: Drinks
-        cocktail: Drinks
-        koreanwine: Drinks
-        sake: Drinks
-        soju: Drinks
-        shochu: Drinks
-        whisky: Drinks
-        wine: Drinks
-    }
+    drinks: any
 }
 
 const MenuComponent: React.FC<Props> = ({ selection, menuName, drinks }) => {
