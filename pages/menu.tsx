@@ -114,7 +114,7 @@ const Menu = () => {
                                         A curated Korean culinary experience
                                     </p>
                                     <div className="info">
-                                        <GS.MainButton href="/goong_menu.pdf" target="_blank"
+                                        <GS.MainButton href="/goong.pdf" target="_blank"
                                         >
                                             <a>
                                                 à la carte Menu

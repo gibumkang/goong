@@ -8,4 +8,13 @@ module.exports = {
         config.resolve.alias['public'] = path.join(__dirname, 'public')
         return config
     },
+    async redirects() {
+        return [
+            {
+                source: '/goong_menu.pdf',
+                destination: '/menu',
+                permanent: true,
+            },
+        ]
+    },
 }
