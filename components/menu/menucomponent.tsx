@@ -30,14 +30,7 @@ type Drinks = {
 }
 
 interface Props {
-    selection: {
-        appetizers: Food
-        beef: Food
-        chicken: Food
-        pork: Food
-        seafood: Food
-        dessert: Food
-    }
+    selection: any
     menuName: string
     drinks: any
 }
@@ -58,7 +51,7 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName, drinks }) => {
             {selection.appetizers && (
                 <S.Container>
                     <div id="appetizers" className="anchor" />
-                    {menuName != 'Shabu Shabu' && <img src="/header-appetizers.webp" alt="Goong Appetizer selections" loading="lazy" />}
+                    {menuName != 'Shabu Shabu' && <img src="/header-appetizers.webp" alt="Wedding" loading="lazy" />}
                     <S.Column>
                         <Fade>
                             {selection.appetizers.map((item, index) => {
