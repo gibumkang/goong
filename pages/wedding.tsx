@@ -1,7 +1,7 @@
 import * as GS from '../styles/global'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
-import MenuComponent from '../components/menu'
+import MenuComponent from '../components/menu/menuwedding'
 import { useState, useEffect } from 'react'
 import useDisplayMenu from '../hooks/useDisplayMenu'
 import Accordion from 'react-bootstrap/Accordion'
@@ -10,7 +10,7 @@ import { CgMenuBoxed } from 'react-icons/cg'
 
 const Menu = () => {
 
-    const { standard, goong, premium, shabushabu, drinks } = useDisplayMenu()
+    const { standard, goong, premium, shabushabu, drinks, nonalcohol } = useDisplayMenu()
     const [menu, setMenu] = useState(goong)
 
     const menuName = menu => {
@@ -38,7 +38,7 @@ const Menu = () => {
             </Fade>
             <GS.YCPadding padding={'5rem'}>
                 <GS.MaxContainer>
-                    <MenuComponent selection={menu} drinks={drinks} menuName={menuName(menu)} />
+                    <MenuComponent selection={menu} drinks={nonalcohol} menuName={menuName(menu)} />
                 </GS.MaxContainer>
             </GS.YCPadding>
         </Background>
