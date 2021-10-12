@@ -78,7 +78,7 @@ const Menu = () => {
                                                     Standard
                                                 </GS.MainButton>
                                                 <div>
-                                                    30+ selections <br /> <h4>$25.95 per person</h4><div className="kid-price">$13.95 for kids</div>
+                                                    30+ selections <br /> <h4>$26.95 per person</h4><div className="kid-price">$14.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -90,7 +90,7 @@ const Menu = () => {
                                                     Goong
                                                 </GS.MainButton>
                                                 <div>
-                                                    40+ selections <br /> <h4>$31.95 per person</h4><div className="kid-price">$15.95 for kids</div>
+                                                    40+ selections <br /> <h4>$32.95 per person</h4><div className="kid-price">$16.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@ const Menu = () => {
                                                     Premium
                                                 </GS.MainButton>
                                                 <div>
-                                                    50+ selections <br /> <h4>$38.95 per person</h4><div className="kid-price">$20.95 for kids</div>
+                                                    50+ selections <br /> <h4>$39.95 per person</h4><div className="kid-price">$21.95 for kids</div>
                                                 </div>
                                             </div>
                                         </div>
