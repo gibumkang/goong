@@ -2,36 +2,20 @@ import menu from './types'
 
 //object with keys that stores an array in value
 export const DRINKS = {
-    nonAlcoholic: [
-        {
-            english_name: 'Coke / Sprite / Diet Coke / Dr. Pepper',
-            price: 2,
-        },
-        {
-            english_name: 'Fiji Water',
-            price: 3,
-        },
-        {
-            english_name: 'Orange / Apple Juice',
-            price: 2.5,
-        },
-        {
-            english_name: 'Sparkline Water',
-            price: 3,
-        },
-        {
-            english_name: 'Iced Black Tea',
-            price: 3,
-        },
-        {
-            english_name: 'Iced / Hot Green Tea',
-            price: 3,
-        },
-    ],
     soju: [
         {
             korean_name: '참이슬',
+            english_name: 'Cham Original',
+            price: 12,
+        },
+        {
+            korean_name: '참이슬',
             english_name: 'Cham Fresh',
+            price: 12,
+        },
+        {
+            korean_name: '처음처럼',
+            english_name: 'Chum Churum',
             price: 12,
         },
         {
@@ -40,8 +24,7 @@ export const DRINKS = {
             price: 12,
         },
         {
-            korean_name: '처음처럼',
-            english_name: 'Chum Churum',
+            english_name: 'Hallasan',
             price: 12,
         },
         {
@@ -61,38 +44,30 @@ export const DRINKS = {
             price: 12,
         },
         {
-            english_name: 'Citron Flavored Soju',
+            english_name: 'Yogurt Flavored Soju',
             price: 12,
         },
         {
-            english_name: 'Green Grape Flavored Soju',
+            english_name: 'Green Grape Soju',
             price: 12,
         },
         {
-            english_name: 'Grapefruit Flavored Soju',
+            english_name: 'Grape Fruit Soju',
             price: 12,
         },
         {
-            english_name: 'Calamansi Flavored Soju',
+            english_name: 'Lychee Soju',
             price: 12,
         },
     ],
     koreanwine: [
-        {
-            english_name: 'Mae Hwa Soo (Plum Wine)',
-            price: 13,
-        },
-        {
-            english_name: 'Sansachun',
-            price: 13,
-        },
         {
             english_name: 'Bek Se Joo (Rice Corn w/ Ginseng)',
             price: 13,
         },
         {
             english_name: 'Chung Ha (Korean Sake)',
-            price: 12,
+            price: 13,
         },
         {
             english_name: 'Bok Bun Ja (Black Raspberry)',
@@ -103,30 +78,8 @@ export const DRINKS = {
             price: 12,
         },
         {
-            english_name: 'Macku (Original/Blueberry/Mango)',
-            price: 7,
-        },
-    ],
-    shochu: [
-        {
-            english_name: 'Kurokirishima',
-            price: 48,
-        },
-        {
-            english_name: 'Kannoko',
-            price: 51,
-        },
-    ],
-    whisky: [
-        {
-            english_name: 'Mars (Iwai) Shot / Bottle',
-            price: 10,
-            bottlePrice: 80,
-        },
-        {
-            english_name: 'Toki (Suntiry) Shot / Bottle',
-            price: 10,
-            bottlePrice: 70,
+            english_name: 'Makgeolli Lychee/Peach',
+            price: 14,
         },
     ],
     sake: [
@@ -135,12 +88,16 @@ export const DRINKS = {
             price: 29,
         },
         {
-            english_name: 'Suijin Junmai (Iwate, 300ML)',
+            english_name: 'Tozai Junmai (Kyoto, 300ML)',
             price: 25,
         },
         {
-            english_name: 'Kikushui Junmai Ginjo (Niigata, 300ML)',
+            english_name: 'Kikusui Junmai Ginjo (Niigata, 300ML)',
             price: 22,
+        },
+        {
+            english_name: 'Yuzu Sake (Niho Sakari, 710ML)',
+            price: 75,
         },
     ],
     cocktail: [
@@ -160,87 +117,121 @@ export const DRINKS = {
             english_name: 'Black Raspberrytini',
             price: 6,
         },
+        {
+            english_name: 'Yuzu Cocktail',
+            price: 12,
+        },
     ],
     beer: [
         {
-            english_name: 'Terra',
-            price: 7,
-        },
-        {
             english_name: 'Cass',
-            price: 7,
+            price: 7.5,
         },
         {
             english_name: 'Kloud Premium',
-            price: 8,
+            price: 8.5,
+        },
+        {
+            english_name: 'Terra',
+            price: 7.5,
         },
         {
             english_name: 'Draft Kirin',
-            price: 5,
+            price: 5.5,
+        },
+    ],
+    nonAlcoholic: [
+        {
+            english_name: 'Coke / Sprite / Diet Coke / Dr. Pepper',
+            price: 2,
         },
         {
-            english_name: 'Yuju Signature',
-            price: 7,
+            english_name: 'Fiji Water',
+            price: 3,
         },
         {
-            english_name: 'Peach Signature',
-            price: 7,
+            english_name: 'Sparkling Water',
+            price: 3,
         },
         {
-            english_name: 'Lychee Signature',
-            price: 7,
+            english_name: 'Orange / Apple Juice',
+            price: 2.5,
+        },
+        {
+            english_name: 'Iced Black Tea',
+            price: 3,
+        },
+        {
+            english_name: 'Iced / Hot Green Tea',
+            price: 3,
         },
     ],
     wine: [
         {
-            english_name: 'Frenzy Savignon Blanc',
-            price: 10,
-            bottlePrice: 32,
+            english_name: 'Frenzy Sauvignon Blanc - Malboro, NZ',
+            price: 12,
+            bottlePrice: 38,
         },
         {
-            english_name: 'Sonoma Cutter Russian River Ranches Chardonnay',
+            english_name: 'Bonterra Sauvignon Blanc - CA',
+            price: 12,
+            bottlePrice: 38,
+        },
+        {
+            english_name: 'Cakebread Sauvignon Blanc - Napa Valley, CA',
+            bottlePrice: 58,
+        },
+        {
+            english_name: 'Sonoma Cutter Chardonnay - Russian River, CA',
             price: 14,
             bottlePrice: 45,
         },
         {
-            english_name: 'LINE39 Chardonnay',
-            price: 8,
-            bottlePrice: 27,
+            english_name: 'Duckhorn Chardonnay - Napa Valley, CA',
+            price: 16,
+            bottlePrice: 48,
         },
         {
-            english_name: 'Caposaldo Pinot Grigio',
-            price: 8,
-            bottlePrice: 27,
+            english_name: 'Santa Margherita Pinot Grigio - Italy',
+            bottlePrice: 50,
         },
         {
-            english_name: 'Pierre Sparr Riesling',
+            english_name: 'Caramel Road Pinot Noir - Monterey, CA',
+            price: 12,
+            bottlePrice: 38,
+        },
+        {
+            english_name: 'Calera Pinot Noir - Central Coast',
+            price: 18,
+            bottlePrice: 65,
+        },
+        {
+            english_name: 'Caposaldo Chanti - Italy',
             price: 10,
-            bottlePrice: 30,
+            bottlePrice: 25,
         },
         {
-            english_name: 'LINE39 Pinot Noir',
-            price: 9,
-            bottlePrice: 28,
+            english_name: 'Tenuta Di Nozzole Chianti - Italy',
+            price: 17,
+            bottlePrice: 54,
         },
         {
-            english_name: 'Cypress (Merlot)',
-            price: 8,
-            bottlePrice: 26,
+            english_name: 'J Lohr Pure Paso Red Blend - CA',
+            price: 16,
+            bottlePrice: 52,
         },
         {
-            english_name: 'J Lohr Estates Seven Oaks Cabernet Sauvignon',
+            english_name: 'J Lohr Cabernet Sauvignon - CA',
             price: 12,
             bottlePrice: 36,
         },
         {
-            english_name: 'Angelline Cabernet Sauvignon',
-            price: 12,
-            bottlePrice: 36,
+            english_name: 'Greenwing Cabernet Sauvigon - Columbia Valley, CA',
+            bottlePrice: 65,
         },
         {
-            english_name: 'Pascual Toso (Malbec)',
-            price: 10,
-            bottlePrice: 32,
+            english_name: 'Le Grand Courtage Brut Blanc Sparkling - France',
+            price: 14,
         },
     ],
 }
