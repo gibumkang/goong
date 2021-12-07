@@ -168,11 +168,6 @@ export const DRINKS = {
     ],
     wine: [
         {
-            english_name: 'Frenzy Sauvignon Blanc - Malboro, NZ',
-            price: 12,
-            bottlePrice: 38,
-        },
-        {
             english_name: 'Bonterra Sauvignon Blanc - CA',
             price: 12,
             bottlePrice: 38,
@@ -196,7 +191,7 @@ export const DRINKS = {
             bottlePrice: 50,
         },
         {
-            english_name: 'Caramel Road Pinot Noir - Monterey, CA',
+            english_name: 'Caramel Road Pinot Noir - Central Coast, CA',
             price: 12,
             bottlePrice: 38,
         },
@@ -209,11 +204,6 @@ export const DRINKS = {
             english_name: 'Caposaldo Chanti - Italy',
             price: 10,
             bottlePrice: 25,
-        },
-        {
-            english_name: 'Tenuta Di Nozzole Chianti - Italy',
-            price: 17,
-            bottlePrice: 54,
         },
         {
             english_name: 'J Lohr Pure Paso Red Blend - CA',
