@@ -57,7 +57,7 @@ const Menu = () => {
                                             <li>All food must be consumed at the restaurant; Leftovers can't be taken home</li>
                                             <li>Extra charges will be applied to unfinished food</li>
                                             <li>Maximum 4 credit cards per party or table</li>
-                                            <li>18% gratuity is included for parties of 8 or more</li>
+                                            <li>18% gratuity is included for parties of 6 or more</li>
                                         </ul>
                                     </Accordion.Collapse>
                                 </Accordion>
