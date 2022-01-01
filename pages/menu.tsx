@@ -9,16 +9,19 @@ import Button from 'react-bootstrap/Accordion'
 import { CgMenuBoxed } from 'react-icons/cg'
 
 const Menu = () => {
-
     const { standard, goong, premium, shabushabu, drinks } = useDisplayMenu()
     const [menu, setMenu] = useState(null)
 
-    const menuName = menu => {
+    const menuName = (menu) => {
         switch (menu) {
-            case standard: return 'Standard'
-            case goong: return 'Goong'
-            case premium: return 'Premium'
-            case shabushabu: return 'Shabu Shabu'
+            case standard:
+                return 'Standard'
+            case goong:
+                return 'Goong'
+            case premium:
+                return 'Premium'
+            case shabushabu:
+                return 'Shabu Shabu'
         }
     }
 
@@ -31,7 +34,9 @@ const Menu = () => {
                     ) : (
                         <>
                             <h2>AYCE {menuName(menu)} Menu</h2>
-                            <div onClick={() => setMenu(null)}>See another menu</div>
+                            <div onClick={() => setMenu(null)}>
+                                See another menu
+                            </div>
                         </>
                     )}
                 </MenuNavigation>
@@ -42,22 +47,61 @@ const Menu = () => {
                         <>
                             <Rules>
                                 <Accordion>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                    <Accordion.Toggle
+                                        as={Button}
+                                        variant="link"
+                                        eventKey="0"
+                                    >
                                         <h3>Goong AYCE Rules</h3>
-                                        <div className="button"><CgMenuBoxed /> Click here to read</div>
-                                        <div className="disclaimer">Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.</div>
+                                        <div className="button">
+                                            <CgMenuBoxed /> Click here to read
+                                        </div>
+                                        <div className="disclaimer">
+                                            Consuming raw or undercooked meats,
+                                            poultry, seafood, shellfish or eggs
+                                            may increase your risk of foodborne
+                                            illness.
+                                        </div>
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey="0">
                                         <ul className="rules">
-                                            <li>Kids less than 40 inches height eat for free | between 40-50 inches will be charged kids price</li>
+                                            <li>
+                                                Kids less than 40 inches height
+                                                eat for free | between 40-50
+                                                inches will be charged kids
+                                                price
+                                            </li>
                                             <li>90 min time limit</li>
-                                            <li>Entire party must order from the same AYCE menu</li>
-                                            <li>Without exception, all guest who are seated at a table will be charged in full</li>
-                                            <li>Our AYCE food is for dine-in only. No for to-go</li>
-                                            <li>All food must be consumed at the restaurant; Leftovers can't be taken home</li>
-                                            <li>Extra charges will be applied to unfinished food</li>
-                                            <li>Maximum 4 credit cards per party or table</li>
-                                            <li>18% gratuity is included for parties of 6 or more</li>
+                                            <li>
+                                                Entire party must order from the
+                                                same AYCE menu
+                                            </li>
+                                            <li>
+                                                Without exception, all guest who
+                                                are seated at a table will be
+                                                charged in full
+                                            </li>
+                                            <li>
+                                                Our AYCE food is for dine-in
+                                                only. No for to-go
+                                            </li>
+                                            <li>
+                                                All food must be consumed at the
+                                                restaurant; Leftovers can't be
+                                                taken home
+                                            </li>
+                                            <li>
+                                                Extra charges will be applied to
+                                                unfinished food
+                                            </li>
+                                            <li>
+                                                Maximum 4 credit cards per party
+                                                or table
+                                            </li>
+                                            <li>
+                                                18% gratuity is included for
+                                                parties of 6 or more
+                                            </li>
                                         </ul>
                                     </Accordion.Collapse>
                                 </Accordion>
@@ -66,43 +110,61 @@ const Menu = () => {
                                 <div>
                                     <h2>AYCE Korean BBQ Menu</h2>
                                     <p>
-                                        A delicious 90-minute AYCE feast, available
-                                        all day.
+                                        A delicious 90-minute AYCE feast,
+                                        available all day.
                                     </p>
                                     <GS.FlexEven className="ayce-button-container">
                                         <div>
                                             <div className="info">
                                                 <GS.MainButton
-                                                    onClick={() => setMenu(standard)}
+                                                    onClick={() =>
+                                                        setMenu(standard)
+                                                    }
                                                 >
                                                     Standard
                                                 </GS.MainButton>
                                                 <div>
-                                                    30+ selections <br /> <h4>$26.95 per person</h4><div className="kid-price">$14.95 for kids</div>
+                                                    30+ selections <br />{' '}
+                                                    <h4>$27.95 per person</h4>
+                                                    <div className="kid-price">
+                                                        $14.95 for kids
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div>
                                             <div className="info">
                                                 <GS.MainButton
-                                                    onClick={() => setMenu(goong)}
+                                                    onClick={() =>
+                                                        setMenu(goong)
+                                                    }
                                                 >
                                                     Goong
                                                 </GS.MainButton>
                                                 <div>
-                                                    40+ selections <br /> <h4>$32.95 per person</h4><div className="kid-price">$16.95 for kids</div>
+                                                    40+ selections <br />{' '}
+                                                    <h4>$34.95 per person</h4>
+                                                    <div className="kid-price">
+                                                        $16.95 for kids
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div>
                                             <div className="info">
                                                 <GS.MainButton
-                                                    onClick={() => setMenu(premium)}
+                                                    onClick={() =>
+                                                        setMenu(premium)
+                                                    }
                                                 >
                                                     Premium
                                                 </GS.MainButton>
                                                 <div>
-                                                    50+ selections <br /> <h4>$39.95 per person</h4><div className="kid-price">$21.95 for kids</div>
+                                                    50+ selections <br />{' '}
+                                                    <h4>$43.95 per person</h4>
+                                                    <div className="kid-price">
+                                                        $21.95 for kids
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,26 +172,22 @@ const Menu = () => {
                                 </div>
                                 <div>
                                     <h2>À la carte Menu</h2>
-                                    <p>
-                                        A curated Korean culinary experience
-                                    </p>
+                                    <p>A curated Korean culinary experience</p>
                                     <div className="info">
-                                        <GS.MainButton href="/goong.pdf" target="_blank"
+                                        <GS.MainButton
+                                            href="/goong.pdf"
+                                            target="_blank"
                                         >
-                                            <a>
-                                                à la carte Menu
-                                            </a>
+                                            <a>à la carte Menu</a>
                                         </GS.MainButton>
-                                        <div>
-                                            Pay for each order
-                                        </div>
+                                        <div>Pay for each order</div>
                                     </div>
                                 </div>
                                 <div>
                                     <h2>AYCE Shabu Shabu Menu</h2>
                                     <p>
-                                        Enjoy delicious AYCE hotpot with fine meat
-                                        selections
+                                        Enjoy delicious AYCE hotpot with fine
+                                        meat selections
                                     </p>
                                     <div className="info">
                                         <GS.MainButton
@@ -138,15 +196,23 @@ const Menu = () => {
                                             Shabu Shabu Menu
                                         </GS.MainButton>
                                         <div>
-                                            15+ selections <br /> <h4>$31.95 per person</h4><div className="kid-price">$15.95 for kids</div>
+                                            15+ selections <br />{' '}
+                                            <h4>$31.95 per person</h4>
+                                            <div className="kid-price">
+                                                $15.95 for kids
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </MenuSelector>
                         </>
-                    ) :
-                        <MenuComponent selection={menu} drinks={drinks} menuName={menuName(menu)} />
-                    }
+                    ) : (
+                        <MenuComponent
+                            selection={menu}
+                            drinks={drinks}
+                            menuName={menuName(menu)}
+                        />
+                    )}
                 </GS.MaxContainer>
             </GS.YCPadding>
         </Background>
@@ -184,14 +250,15 @@ const MenuNavigation = styled.div`
 
 const Rules = styled.div`
     margin-bottom: 2.5rem;
-    h3, .button {
+    h3,
+    .button {
         text-align: center;
     }
     .button {
-        border: .1rem solid #ccc;
+        border: 0.1rem solid #ccc;
         max-width: 20rem;
         margin: 0 auto;
-        padding: .5rem .25rem;
+        padding: 0.5rem 0.25rem;
         border-radius: 1rem;
         font-size: 1.4rem;
         &:hover {
@@ -203,7 +270,7 @@ const Rules = styled.div`
         text-align: left;
         padding: 1rem 4rem;
         li {
-            padding: .5rem 0rem;
+            padding: 0.5rem 0rem;
             font-size: 1.4rem;
         }
     }
@@ -211,7 +278,7 @@ const Rules = styled.div`
         text-align: center;
         font-size: 1.2rem;
         padding: 1rem 3rem;
-        opacity: .7;
+        opacity: 0.7;
     }
 `
 
@@ -221,7 +288,7 @@ const MenuSelector = styled.div`
         border: 0.1rem solid #ccc;
         padding: 7.5rem 2.5rem;
         position: relative;
-        background: rgba(255,255,255,0.9);
+        background: rgba(255, 255, 255, 0.9);
         margin-bottom: 2.5rem;
         h2 {
             font-size: 2.1rem;
@@ -263,7 +330,7 @@ const MenuSelector = styled.div`
     }
     .kid-price {
         font-size: 1.3rem;
-        margin-top: .25rem;
+        margin-top: 0.25rem;
         color: #666;
     }
 `
