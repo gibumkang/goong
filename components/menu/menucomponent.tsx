@@ -406,6 +406,12 @@ const MenuComponent: React.FC<Props> = ({ selection, menuName, drinks }) => {
                             })}
                         </Fade>
                     </S.Column>
+                    <p style={{ marginTop: '60px' }}>
+                        Please be advised that all items should be cooked well
+                        to decrease the risk of foodborne illness. Consuming raw
+                        or undercooked meats, poultry, seafood, shellfish, or
+                        eggs may increase your risk of foodborne illness.
+                    </p>
                 </S.Container>
             )}
 
